@@ -1,3 +1,7 @@
+// ##########  Everything needing import 🙂  ##########
+// # styles
+import './style.scss';
+
 
 function Destination() {
     return (

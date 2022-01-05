@@ -1,3 +1,6 @@
+// ##########  Everything needing import 🙂  ##########
+// # styles
+import './style.scss';
 
 function Home() {
     return (

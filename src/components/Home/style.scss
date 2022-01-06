@@ -1,0 +1,7 @@
+// # Import shared styles
+@use '../../styles/index';
+
+// ## Styling Component ##
+.home{
+    background-image:url('../assets/home/background-home-desktop.jpg')
+}

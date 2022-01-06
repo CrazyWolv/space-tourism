@@ -1,5 +1,17 @@
 @use 'reset';
 @use 'vars';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+
+// # general variables
+$general-font:'Bellefair', serif;
+$secondary-font:'Barlow Condensed', sans-serif;;
+$title-color: #FFFFFF;
+$button-color:#0B0D17;
+$text-color:#D0D6F9;
+
+
+// # general styling
 
 body {
   margin: 0;
@@ -8,12 +20,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:#fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+// # all titles & subtitles
+h1, h2, h3, h4, .subheading1{
+font-family:$general-font;
+color:$title-color;
 }
+h5, .subheading2, .navtext{
+  font-family:$secondary-font;
+}
+h1{
+font-size:150px;
+}
+h2{
+  font-size:100px;
+}
+h3{
+  font-size:56px;
+}
+h4{
+  font-size:32px;
+}
+h5{
+color:$text-color;
+font-size:28px;
+letter-spacing: 4.75px;
+}
+
+.subheading1{
+  font-size:28px;
+}
+.subheading2{
+  font-size:14px;
+  letter-spacing: 2.35px;
+}
+.navtext{
+  font-size:16px;
+  letter-spacing: 2.7px;
+}
+
+
+// # text
+p{
+  color:$text-color;
+}
+
 
 /* 
   // or you can import your own font

@@ -1,16 +1,8 @@
-//TODO -- LIST 
-//TODO -- IMPORT PACKAGES IF NEEDED
-//TODO -- TEST CODE
-//TODO -- TEST DATA
-//TODO -- CREATE TEMPLATES/APP STRUCTURE
-//TODO -- STYLE EVERYTHING
-//TODO -- GO FOR DYNAMAXING w/ DATA !
-//TODO -- TESTING DATA & CODE
-//TODO -- REFACTORING CODE IF NEEDED
-//TODO -- TEST TEST TEST
-//TODO -- DEPLOY :heart:
-
 // ##########  Everything needing import 🙂  ##########
+// # Packages
+import { Route, Switch } from 'react-router-dom';
+
+
 // # Components
 import HeaderNav from '../Header-Nav'; // <-- Contains navigation
 import Home from '../Home'; // <-- Homepage
@@ -24,17 +16,28 @@ import data from '../../data/data.json';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
         <HeaderNav />
       </header>
       
-      <Home />
-      <Destination />
-      <Crew />
-      <Technology />
-    
-    </div>
+      <body>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/destinations">
+            <Destination />
+          </Route>
+          <Route exact path="/crew">
+            <Crew />
+          </Route>
+          <Route exact path="/technologies">
+            <Technology />
+          </Route>
+      </Switch>
+      </body>
+    </>
   );
 }
 

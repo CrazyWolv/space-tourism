@@ -3,7 +3,7 @@
 import './style.scss';
 
 
-function Destination() {
+const Destination = () => {
     return (
         <div className="destinations">
             <h1>01 Pick your destination</h1>

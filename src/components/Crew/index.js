@@ -1,5 +1,9 @@
+// ##########  Everything needing import 🙂  ##########
+// # styles
+import './style.scss';
 
-function Crew() {
+
+const Crew = () => {
     return (
         <div className="crew">
         <h1>02 Meet your crew</h1>

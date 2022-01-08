@@ -1,6 +1,6 @@
 // ##########  Everything needing import 🙂  ##########
 // # Packages
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 
 // # Components
@@ -14,29 +14,19 @@ import Technology from '../Technology'; // <-- Contains all technologies
 import './style.scss';
 import data from '../../data/data.json';
 
-function App() {
+const App = () => {
   return (
     <>
-      <header className="App-header">
+<div className="app">
         <HeaderNav />
-      </header>
       
-      <body>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/destinations">
-            <Destination />
-          </Route>
-          <Route exact path="/crew">
-            <Crew />
-          </Route>
-          <Route exact path="/technologies">
-            <Technology />
-          </Route>
-      </Switch>
-      </body>
+      <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/destinations" element={<Destination />} />
+          <Route exact path="/crew" element={<Crew />} />
+          <Route exact path="/technologies" element={<Technology />} />
+        </Routes>
+        </div>
     </>
   );
 }

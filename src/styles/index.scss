@@ -5,10 +5,12 @@
 
 // # general variables
 $general-font:'Bellefair', serif;
-$secondary-font:'Barlow Condensed', sans-serif;;
+$secondary-font:'Barlow Condensed', sans-serif;
 $title-color: #FFFFFF;
 $button-color:#0B0D17;
 $text-color:#D0D6F9;
+$page-height:100vh;
+$space-from-header:10vh;
 
 
 // # general styling
@@ -24,14 +26,16 @@ body {
 }
 
 // # all titles & subtitles
-h1, h2, h3, h4, .subheading1{
+h1, h2, h3, h4, .heading1, .subheading1{
+  text-transform:uppercase;
 font-family:$general-font;
 color:$title-color;
 }
 h5, .subheading2, .navtext{
+  text-transform:uppercase;
   font-family:$secondary-font;
 }
-h1{
+h1, .heading1{
 font-size:150px;
 }
 h2{
@@ -62,6 +66,11 @@ letter-spacing: 4.75px;
 }
 
 
+// # Every page from the app
+.homepage, .crew, .technology, .destinations{
+  padding-top:$space-from-header;
+  height:$page-height;
+}
 // # text
 p{
   color:$text-color;

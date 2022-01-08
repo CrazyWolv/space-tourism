@@ -2,7 +2,7 @@
 // # styles
 import './style.scss';
 
-function Technology() {
+const Technology = () => {
     return (
         <div className="technology">
             <h1>03 Space launch 101</h1>

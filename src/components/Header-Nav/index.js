@@ -1,14 +1,15 @@
 // ##########  Everything needing import 🙂  ##########
 import { NavLink } from 'react-router-dom';
 
-// # styles
+// # styles & images
+import { ReactComponent as Logo } from '/assets/shared/logo.svg'; 
 import './style.scss';
 
 const HeaderNav = () => {
     return (
       <header>
       <div className='navigation--container'>
-        <img src='/assets/shared/logo.svg' className='navigation--logo' alt='Space Tourism Logo' title='Space Tourism Logo' />
+        <img src={Logo} className='navigation--logo' alt='Space Tourism Logo' title='Space Tourism Logo' />
         <div className='navigation--line' />
         <nav className='navigation'>
             <ul>

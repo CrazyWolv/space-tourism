@@ -2,10 +2,14 @@
 import { NavLink } from 'react-router-dom';
 
 // # styles & images
-import { ReactComponent as Logo } from '/assets/shared/logo.svg'; 
+import Logo from '/assets/shared/logo.svg'; 
 import './style.scss';
 
 const HeaderNav = () => {
+    //TODO : const + function to get screen size to manage responsivness on tablet & mobile
+    // function getScreenWidth(){
+    //
+    // }
     return (
       <header>
       <div className='navigation--container'>

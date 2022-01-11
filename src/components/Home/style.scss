@@ -1,5 +1,6 @@
 // # Import shared styles
-@use '../../styles/index';
+@use 'src/styles/vars';
+@use 'src/styles/index';
 
 
 
@@ -11,18 +12,37 @@
     -o-background-size: cover;
     background-size: cover;
 
+    .homepage-content{
+        width:80%;
+        margin: auto auto;
+    }
+
     .homepage-flex{
         display:flex;
+        justify-content:space-between;
+        align-content:flex-end;
+
+        .homepage-flex-left, .homepage-flex-right{
+            width:40%;
+        }
 
         .homepage-flex-left{
-            color:$text-color;
+            color:vars.$text-color;
             font-size:13px;
+
+            .homepage-flex-left--paragraph{
+                width:80%;
+            }
         }
 
         .explore-button{
-            width:100px;
-            height:100px;
-            color:$dark-color;
+            display:block;
+            border:none;
+            border-radius:100%;
+            width:150px;
+            height:150px;
+            background-color:vars.$light-color;
+            color:vars.$dark-color;
         }
         .explore-button:hover{
 

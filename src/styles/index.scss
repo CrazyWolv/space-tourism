@@ -1,6 +1,6 @@
 @use 'reset';
 @use 'vars';
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Open+Sans:wght@300;400&display=swap');
 
 
 // # general styling
@@ -17,18 +17,21 @@ body {
 // # all titles & subtitles
 h1, h2, h3, h4, .heading1, .subheading1{
   text-transform:uppercase;
-font-family:$general-font;
-color:$title-color;
+font-family:vars.$general-font;
+color:vars.$light-color;
 }
 h5, .title, .subheading2, .navtext{
   text-transform:uppercase;
-  font-family:$secondary-font;
+  font-family:vars.$secondary-font;
 }
 h1, .heading1{
 font-size:150px;
+margin:25px 0;
 }
+
 h2{
   font-size:100px;
+  margin:25px 0;
 }
 h3{
   font-size:56px;
@@ -37,7 +40,7 @@ h4{
   font-size:32px;
 }
 h5, .title{
-color:$text-color;
+color:vars.$text-color;
 font-size:28px;
 letter-spacing: 4.75px;
 }
@@ -48,26 +51,36 @@ letter-spacing: 4.75px;
 .subheading2{
   font-size:14px;
   letter-spacing: 2.35px;
+  padding:1rem 0;
 }
 .navtext{
   font-size:16px;
   letter-spacing: 2.7px;
 }
 
+.title{
+  color:vars.$light-color;
+  margin:5rem;
+}
+
 .title-darkNumber{
-  color:$dark-color;
+  opacity:vars.$title-opacity;
+  padding-right:20px;
+  font-weight:bolder;
 }
 
 .text{
-  color:$text-color;
-  font-size:13px;
+  font-family:vars.$secondary-font;
+  line-height:35px;
+  color:vars.$text-color;
+  font-size:22px;
 }
 
 
 // # Every page from the app
 .homepage, .crew, .technology, .destinations{
-  padding-top:$space-from-header;
-  height:$page-height;
+  padding-top:vars.$space-from-header;
+  height:vars.$page-height;
 }
 
 /* 

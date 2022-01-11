@@ -1,5 +1,6 @@
 // # Import shared styles
-@use '../../styles/index';
+@use 'src/styles/vars';
+@use 'src/styles/index';
 
 
 
@@ -10,6 +11,56 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    .destinations-content{
+        width:90%;
+        margin: auto auto;
+
+        .destination-flex{
+            width:80%;
+            margin: auto auto;
+
+
+            .destination-flex-content{
+                display:flex;
+                justify-content:space-between;
+        
+                .destination-flex-image{
+                }
+    
+                .destination-flex-allText{
+                    width:50%;
+                }
+    
+                .destination-flex-allText--text{
+                    padding-bottom:2rem;
+                }
+        
+                .destination-flex-allText--nav, .destination-flex-allText--subheadings{
+                    display:flex;
+                }
+    
+                .destination-flex-allText--subheadings{
+                    border-top:0.5px solid vars.$text-color;
+                }
+    
+                .destination-flex-allText--nav{
+                    width:80%;
+                    justify-content:space-between;
+                }
+    
+                .subheading2{
+                    color:vars.$text-color;
+                }
+    
+                .column{
+                    margin:25px 0;
+                    width:50%;
+                }
+            }
+        }
+
+    }
 }
 
 // ## Media queries for responsivness ##

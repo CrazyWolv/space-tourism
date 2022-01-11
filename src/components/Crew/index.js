@@ -9,8 +9,8 @@ const Crew = () => {
         <div className="crew">
         <div className="title"><span className='title-darkNumber'>02</span> Meet your crew</div>
 
-        Commander
-        Douglas Hurley
+        <h4>Commander</h4>
+        <h2>Douglas Hurley</h2>
 
         Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
         and former NASA astronaut. He launched into space for the third time as 

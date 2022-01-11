@@ -10,9 +10,12 @@ import Destination from '../Destination'; // <-- Contains all destinations
 import Crew from '../Crew'; // <-- Contains all crew members
 import Technology from '../Technology'; // <-- Contains all technologies
 
+
 // # Styles & Data (from JSON)
 import './style.scss';
 import data from '../../data/data.json';
+
+
 
 const App = () => {
   return (

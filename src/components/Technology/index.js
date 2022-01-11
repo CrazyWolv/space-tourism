@@ -1,11 +1,16 @@
 // ##########  Everything needing import 🙂  ##########
+
+
 // # styles
 import './style.scss';
+
+
+//TODO:Carousel for technologies using a map
 
 const Technology = () => {
     return (
         <div className="technology">
-            <h1>03 Space launch 101</h1>
+            <div className="title"><span className='title-darkNumber'>03</span> Space launch 101</div>
 
             1
             2

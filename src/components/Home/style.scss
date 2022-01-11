@@ -1,6 +1,8 @@
 // # Import shared styles
 @use '../../styles/index';
 
+
+
 // ## Styling Component ##
 .homepage{
     background:url('/assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
@@ -8,7 +10,26 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    .homepage-flex{
+        display:flex;
+
+        .homepage-flex-left{
+            color:$text-color;
+            font-size:13px;
+        }
+
+        .explore-button{
+            width:100px;
+            height:100px;
+            color:$dark-color;
+        }
+        .explore-button:hover{
+
+        }
+    }
 }
+
 
 // ## Media queries for responsivness ##
 @media screen and (min-width: 1024px) {

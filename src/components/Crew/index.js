@@ -2,11 +2,12 @@
 // # styles
 import './style.scss';
 
+//TODO:Carousel for crew members using a map
 
 const Crew = () => {
     return (
         <div className="crew">
-        <h1>02 Meet your crew</h1>
+        <div className="title"><span className='title-darkNumber'>02</span> Meet your crew</div>
 
         Commander
         Douglas Hurley

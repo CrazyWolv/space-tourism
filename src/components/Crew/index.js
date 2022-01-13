@@ -4,7 +4,9 @@ import './style.scss';
 
 //TODO:Carousel for crew members using a map
 
-const Crew = () => {
+const Crew = ({data}) => {
+    // console.log(data); //<-- OK
+    
     return (
         <div className="crew">
         <div className="title"><span className='title-darkNumber'>02</span> Meet your crew</div>

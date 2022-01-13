@@ -23,6 +23,9 @@ const App = () => {
     // function getScreenWidth(){
     //
     // }
+    // console.log(data); //<-- OK
+
+    
   return (
     <>
       <div className="app">
@@ -30,9 +33,9 @@ const App = () => {
             
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route exact path="/destinations" element={<Destination />} />
-                <Route exact path="/crew" element={<Crew />} />
-                <Route exact path="/technologies" element={<Technology />} />
+                <Route exact path="/destinations" element={<Destination data={data.destinations} />} />
+                <Route exact path="/crew" element={<Crew data={data.crew}/>} />
+                <Route exact path="/technologies" element={<Technology data={data.technology} />} />
             </Routes>
       </div>
     </>

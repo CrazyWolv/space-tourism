@@ -5,7 +5,9 @@ import image from './image-moon.png';
 
 //TODO:Carousel for destinations using a map
 
-const Destination = () => {
+const Destination = ({data}) => {
+    // console.log(data); //<-- OK
+    
     return (
         <div className='destinations'>
             <div className='destinations-content'>

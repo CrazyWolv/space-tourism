@@ -13,54 +13,57 @@
     background-size: cover;
 
     .homepage-content{
-        width:80%;
+        width:70%;
+        padding-top:20vh;
         margin: auto auto;
     }
-
+    
     .homepage-flex{
         display:flex;
-        justify-content:space-between;
-        align-content:flex-end;
+        justify-content:space-around;
 
-        .homepage-flex-left, .homepage-flex-right{
-            width:40%;
-        }
-
+        
         .homepage-flex-left{
+            width:80%;
             color:vars.$text-color;
+            padding:20px;
             font-size:13px;
-
+            
             .homepage-flex-left--paragraph{
-                width:80%;
+                width:60%;
             }
         }
+        
+        .homepage-flex-right{
+            width:20%;
 
-        .explore-button{
-            display:block;
-            border:none;
-            outline:1px solid #fff;
-            border-radius:100%;
-            width:250px;
-            height:250px;
-            background-color:vars.$light-color;
-            color:vars.$dark-color;
-            font-size:30px;
-            font-family:vars.$general-font;
-            text-transform: uppercase;
-            transition: outline 0.5s;
-            -webkit-transition: outline 0.5s;
-            -moz-transition: outline 0.5s;
-            -ms-transition: outline 0.5s;
-            -o-transition: outline 0.5s;
-}
-        .explore-button:hover{
-            outline:20px solid lightgray;
-            transition: outline 0.5s;
-            -webkit-transition: outline 0.5s;
-            -moz-transition: outline 0.5s;
-            -ms-transition: outline 0.5s;
-            -o-transition: outline 0.5s;
-}
+            .explore-button{
+                display:block;
+                border:none;
+                outline:1px solid #fff;
+                border-radius:100%;
+                width:250px;
+                height:250px;
+                background-color:vars.$light-color;
+                color:vars.$dark-color;
+                font-size:30px;
+                font-family:vars.$general-font;
+                text-transform: uppercase;
+                transition: outline 0.5s;
+                -webkit-transition: outline 0.5s;
+                -moz-transition: outline 0.5s;
+                -ms-transition: outline 0.5s;
+                -o-transition: outline 0.5s;
+    }
+            .explore-button:hover{
+                outline:20px solid lightgray;
+                transition: outline 0.5s;
+                -webkit-transition: outline 0.5s;
+                -moz-transition: outline 0.5s;
+                -ms-transition: outline 0.5s;
+                -o-transition: outline 0.5s;
+    }
+        }
     }
 }
 

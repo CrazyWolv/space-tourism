@@ -20,7 +20,7 @@ const Home = () => {
                     </div>
                     <div className="homepage-flex-right">
                         <button className="explore-button">
-                            Explore
+                            <a href="/destinations" target="_blank">Explore</a>
                         </button>
                     </div>
                 </div>

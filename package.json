@@ -13,10 +13,10 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "sass": "^1.47.0",
+    "sass": "^1.48.0",
     "svg-url-loader": "^7.1.1",
     "web-vitals": "^2.1.2",
-    "webpack": "^5.65.0"
+    "webpack": "^5.66.0"
   },
   "scripts": {
     "start": "react-scripts start",

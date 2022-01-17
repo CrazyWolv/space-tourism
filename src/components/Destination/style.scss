@@ -12,54 +12,65 @@
     -o-background-size: cover;
     background-size: cover;
 
+    // Page Content
     .destinations-content{
         width:90%;
         margin: auto auto;
 
+        // Flex Container
         .destination-flex{
             width:80%;
             margin: auto auto;
 
-
+            // Flex Content -- Image + Navbar & Text
             .destination-flex-content{
                 display:flex;
                 justify-content:space-between;
         
+                // Image Container on the Left
                 .destination-flex-image{
+
                 }
     
+                // Text Container on the Right
                 .destination-flex-allText{
                     width:50%;
-                }
+
+                    // Navigation between Destinations
+                    .destination-flex-allText--nav{
+                        width:80%;
+                        justify-content:space-between;
+                    }
+
+                    // Navbar & Suheading Containers (travel time/km)
+                    .destination-flex-allText--nav, .destination-flex-allText--subheadings{
+                        display:flex;
+                    }
+                    
+                    // Text Content (paragraph) below navbar & title
+                    .destination-flex-allText--text{
+                        padding-bottom:2rem;
+                    }
+                    
+                    
+                    // Subheadings
+                    .destination-flex-allText--subheadings{
+                        border-top:0.5px solid vars.$text-color;
     
-                .destination-flex-allText--text{
-                    padding-bottom:2rem;
-                }
-        
-                .destination-flex-allText--nav, .destination-flex-allText--subheadings{
-                    display:flex;
-                }
-    
-                .destination-flex-allText--subheadings{
-                    border-top:0.5px solid vars.$text-color;
-                }
-    
-                .destination-flex-allText--nav{
-                    width:80%;
-                    justify-content:space-between;
-                }
-    
-                .subheading2{
-                    color:vars.$text-color;
-                }
-    
-                .column{
-                    margin:25px 0;
-                    width:50%;
+                        // Column
+                        .column{
+                            margin:25px 0;
+                            width:50%;
+                            
+                            //SubHeading titles
+                            .subheading2{
+                                color:vars.$text-color;
+                            }
+                        }
+                    }
                 }
             }
         }
-
     }
 }
 
@@ -73,5 +84,27 @@
 }
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
-
+    .destinations{
+        background:url('/assets/destination/background-destination-mobile.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    
+        .destinations-content{
+            width:90%;
+            margin: auto auto;
+    
+            .destination-flex{
+                width:80%;
+                margin: auto auto;
+    
+    
+                .destination-flex-content{
+                    display:flex;
+                    flex-direction: column;
+                }
+            }
+        }
     }
+}

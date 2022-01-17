@@ -5,45 +5,84 @@
 
 
 // ## Styling Component ##
-header, .navigation--container, .navigation--container ul{
+header, .navigation--container-content, .navigation--container-content-logo-nd-line{
     display:flex;
 }
 
 header{
     position:relative;
-    justify-content:space-between;
     width:100%;
 }
+
+// # Navigation container to place navigation / header
 .navigation--container{
     position:absolute;
     width:100%;
     height:100px;
-    padding:50px;
-}
-
-.navigation--line{
-    border:0.2px solid vars.$light-color;
-    height:1px;
-    width:50%;
-    margin:10px 20px;
-    opacity:0.5;
-}
-
-.navigation--logo{
-display:block;
-}
-
-.navlink{
-        padding:0 20px;
-    }
-
-    .navlink-active{
-        border-bottom:2px solid vars.$light-color;
-    }
+    padding-top:5%;
     
-    .strongNumber{
-        font-weight:bolder;
+    // # Navigation Container's whole content
+    .navigation--container-content{
+        background-color: rgb(143, 172, 114);
+        padding:30px 50px;
+        width:100%;
+        align-content:flex-start;
+        align-items:center;
+        //TODO:Pixelated background w/ background-image lineart gradient
+
+        // Navigation Logo & Line container
+        .navigation--container-content-logo-nd-line{
+            width:50%;
+            align-items:center;
+            gap:5%;
+
+            // ## Navigation Logo to the left
+            .navigation--logo{
+                display:block;
+            }
+
+
+            // ## Navigation line between logo & navigation
+            .navigation--line{
+                border:1px solid vars.$light-color;
+                width:80%;
+                height:auto;
+                opacity:0.7;
+            }
+        }
+
+
+
+        // ## Navigation Links
+        .navigation--links{
+            width:50%;
+
+            // Every Links
+            .nav-link{
+                margin:0 10px;
+            
+                // Active Link class
+                &.active{
+                    border-bottom:2px solid vars.$light-color;
+                }
+            
+                // Non-Active link
+                &.unselected{
+                    border:none;
+                }
+                }
+                
+                // Number before link name
+                .strongNumber{
+                    font-weight:bolder;
+                }
+        }
+
     }
+}
+
+
+
 
 
 

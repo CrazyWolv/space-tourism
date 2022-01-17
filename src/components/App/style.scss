@@ -8,3 +8,19 @@
     width:100%;
     height:100vh;
 }
+
+
+// ## Media queries for responsivness ##
+@media screen and (min-width: 1024px) {
+    
+}
+// # Media query -- TABLET
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .strongNumber{
+        display:hidden;
+    }
+}
+// # Media query -- MOBILE
+@media screen and (max-width: 767px) {
+
+    }

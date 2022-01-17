@@ -1,7 +1,7 @@
 // ##########  Everything needing import 🙂  ##########
 // # styles
 import './style.scss';
-import image from './image-moon.png';
+import image from '../../assets/destination/image-moon.png';
 
 //TODO:Carousel for destinations using a map
 

@@ -8,8 +8,8 @@ import './style.scss';
 //TODO:Carousel for technologies using a map
 
 const Technology = ({data}) => {
-    console.log(data); //<-- OK
-    
+    // console.log(data); //<-- OK
+
     return (
         <div className="technology">
             <div className="title"><span className='title-darkNumber'>03</span> Space launch 101</div>

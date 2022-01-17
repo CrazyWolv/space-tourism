@@ -1,7 +1,7 @@
 // ##########  Everything needing import 🙂  ##########
 // # Packages
 import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 
 
 // # Components
@@ -23,13 +23,14 @@ const App = () => {
     // function getScreenWidth(){
     //
     // }
+    
     // console.log(data); //<-- OK
 
-    
+
   return (
     <>
       <div className="app">
-              <HeaderNav />
+        <HeaderNav />
             
             <Routes>
                 <Route exact path="/" element={<Home />} />

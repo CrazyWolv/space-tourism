@@ -1,23 +1,39 @@
 // ##########  Everything needing import 🙂  ##########
 // # styles
 import './style.scss';
+import image from '../../assets/crew/image-douglas-hurley.png';
 
 //TODO:Carousel for crew members using a map
 
-const Crew = ({data}) => {
+const Crew = ({data, isTablet, isMobile}) => {
     // console.log(data); //<-- OK
     
     return (
         <div className="crew">
-        <div className="title"><span className='title-darkNumber'>02</span> Meet your crew</div>
+            <div className='crew-content'>
+                <div className="title"><span className='title-darkNumber'>02</span> Meet your crew</div>
 
-        <h4>Commander</h4>
-        <h2>Douglas Hurley</h2>
+                <div className='crew-content--flex-container'>
+                    <div className='crew-content--flex-container--content'>
+                        <div className='crew-content--flex-container--content-allText'>
+                        <div className='crewmember-function'>Commander</div>
+                        <h2>Douglas Hurley</h2>
 
-        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-        and former NASA astronaut. He launched into space for the third time as 
-        commander of Crew Dragon Demo-2.
-
+                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+                        and former NASA astronaut. He launched into space for the third time as 
+                        commander of Crew Dragon Demo-2.
+                        </div>
+                        <div className='crew-content--flex-container--content-carousel-nd-image'>
+                            <div className='crew-content--flex-container--content-carousel-nd-image--carousel'>
+                                <div className='carousel-dot' /><div className='carousel-dot' /><div className='carousel-dot' />
+                            </div>
+                            <div className='crew-content--flex-container--content-carousel-nd-image--image'>
+                                <img src={image} alt='Crew member' title='crew member'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

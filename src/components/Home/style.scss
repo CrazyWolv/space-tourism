@@ -54,15 +54,16 @@
                 -moz-transition: outline 0.5s;
                 -ms-transition: outline 0.5s;
                 -o-transition: outline 0.5s;
-    }
+            }
+            
             .explore-button:hover{
-                outline:20px solid lightgray;
+                outline:20px solid vars.$dark-color;
                 transition: outline 0.5s;
                 -webkit-transition: outline 0.5s;
                 -moz-transition: outline 0.5s;
                 -ms-transition: outline 0.5s;
                 -o-transition: outline 0.5s;
-    }
+            }
         }
     }
 }

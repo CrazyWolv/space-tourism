@@ -24,7 +24,7 @@ header{
     // # Navigation Container's whole content
     .navigation--container-content{
         background-color: rgb(143, 172, 114);
-        padding:30px 50px;
+        padding:40px 50px;
         width:100%;
         align-content:flex-start;
         align-items:center;
@@ -60,6 +60,7 @@ header{
             // Every Links
             .nav-link{
                 margin:0 10px;
+                padding:0 20px;
             
                 // Active Link class
                 &.active{
@@ -71,10 +72,15 @@ header{
                     border:none;
                 }
                 }
+
+            .nav-link:hover{
+                border-bottom:2px solid vars.$hover-border;
+            }
                 
                 // Number before link name
                 .strongNumber{
                     font-weight:bolder;
+                    padding-right:5px;
                 }
         }
 

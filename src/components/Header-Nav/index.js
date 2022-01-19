@@ -5,7 +5,7 @@ import Logo from '../../assets/shared/logo.svg';
 // # styles & images
 import './style.scss';
 
-const HeaderNav = () => {
+const HeaderNav = ({isTablet, isMobile}) => {
     return (
       <header>
       <div className='navigation--container'>
@@ -17,27 +17,27 @@ const HeaderNav = () => {
             <nav className='navigation--links'>
                         <NavLink
                             to='/'
-                            className='navtext nav-link'
+                            className='nav-link'
                             activeClassName="-active"
                         ><span className='strongNumber'>00</span> Home
                         </NavLink>
                         <NavLink
                             to='/destinations'
-                            className='navtext nav-link'
+                            className='nav-link'
                             activeClassName="-active"
                         >
                             <span className='strongNumber'>01</span> Destination
                         </NavLink>
                         <NavLink
                             to='/crew'
-                            className='navtext nav-link'
+                            className='nav-link'
                             activeClassName="-active"
                         >
                             <span className='strongNumber'>02</span> Crew
                         </NavLink>
                         <NavLink
                             to='/technologies'
-                            className='navtext nav-link'
+                            className='nav-link'
                             activeClassName="-active"
                         >
                             <span className='strongNumber'>03</span> Technology

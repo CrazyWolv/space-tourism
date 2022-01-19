@@ -37,13 +37,39 @@
                     width:50%;
 
                     // Navigation between Destinations
-                    .destination-flex-allText--nav{
+                    .destination-flex-allText--tabs{
                         width:80%;
                         justify-content:space-between;
+
+                        // Every Planet Destination Link
+                        .tabtext{
+                            font-size:16px;
+                            letter-spacing: 2.7px;
+                            padding-bottom:10px;
+                            cursor:pointer;
+                            transition: all 0.3s;
+                            -webkit-transition: all 0.3s;
+                            -moz-transition: all 0.3s;
+                            -ms-transition: all 0.3s;
+                            -o-transition: all 0.3s;
+                          }
+                          
+                          .tabtext:hover{
+                            border-bottom:4px solid vars.$hover-border;
+                            transition: all 0.3s;
+                            -webkit-transition: all 0.3s;
+                            -moz-transition: all 0.3s;
+                            -ms-transition: all 0.3s;
+                            -o-transition: all 0.3s;
+                          }
+                          
+                          .tabtext-active{
+                          border-bottom:4px solid vars.$light-color;
+                          }
                     }
 
                     // Navbar & Suheading Containers (travel time/km)
-                    .destination-flex-allText--nav, .destination-flex-allText--subheadings{
+                    .destination-flex-allText--tabs, .destination-flex-allText--subheadings{
                         display:flex;
                     }
                     

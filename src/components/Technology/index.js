@@ -7,7 +7,7 @@ import './style.scss';
 
 //TODO:Carousel for technologies using a map
 
-const Technology = ({data}) => {
+const Technology = ({data, isTablet, isMobile}) => {
     // console.log(data); //<-- OK
 
     return (

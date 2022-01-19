@@ -11,11 +11,76 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    // Page Container/Content
+    .crew-content{
+
+        // Flex Container
+        .crew-content--flex-container{
+    
+    
+            // Flex Content
+            .crew-content--flex-container--content{
+        
+        
+                // All Text
+                .crew-content--flex-container--content-allText{
+            
+                    
+                    // Crewmember's Job
+                    .crewmember-function{
+                        font-family: vars.$general-font;
+                        font-weight: lighter;
+                        color:vars.$secondary-color;
+                    }
+
+                    // Paragraph
+                    .crew-content--flex-container--content-allText--text{
+
+                    }
+                }
+
+                // Dots + Image Container
+                .crew-content--flex-container--content-carousel-nd-image{
+
+
+                    // Dots Container
+                    .crew-content--flex-container--content-carousel-nd-image--carousel{
+                        display:flex;
+                        justify-content:space-around;
+
+                        // Dots
+                        .carousel-dot{
+                            width:10px;
+                            height:10px;
+                            margin:10px 0;
+                            background-color:vars.$dark-color;
+                            cursor:pointer;
+
+                            // Dots active
+                            .cd-active{
+                                background-color:vars.$light-color;
+                            }
+                        }
+
+                        // Dots Hover
+                        .carousel-dot:hover{
+                            background-color:vars.$hover-border;
+                        }
+
+                    }
+
+                    // Crew Member's Photograph
+                    .crew-content--flex-container--content-carousel-nd-image--image{
+                        
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
-.crewmember-function{
-    font-weight: lighter;
-}
 
 
 // ## Media queries for responsivness ##

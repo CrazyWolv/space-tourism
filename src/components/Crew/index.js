@@ -19,9 +19,11 @@ const Crew = ({data, isTablet, isMobile}) => {
                         <div className='crewmember-function'>Commander</div>
                         <h2>Douglas Hurley</h2>
 
-                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-                        and former NASA astronaut. He launched into space for the third time as 
-                        commander of Crew Dragon Demo-2.
+                        <div className='text crew-content--flex-container--content-allText--text'>
+                            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+                            and former NASA astronaut. He launched into space for the third time as 
+                            commander of Crew Dragon Demo-2.
+                        </div>
                         </div>
                         <div className='crew-content--flex-container--content-carousel-nd-image'>
                             <div className='crew-content--flex-container--content-carousel-nd-image--carousel'>

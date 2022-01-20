@@ -20,7 +20,7 @@ h1, h2, h3, h4, .heading1, .subheading1{
 font-family:vars.$general-font;
 color:vars.$light-color;
 }
-h5, .title, .subheading2, .navtext{
+h5, .title, .subheading2, .navtext, .tabtext, .nav-link{
   text-transform:uppercase;
   font-family:vars.$secondary-font;
 }
@@ -78,15 +78,3 @@ letter-spacing: 4.75px;
   padding-top:vars.$space-from-header;
   height:vars.$page-height;
 }
-
-/* 
-  // or you can import your own font
-  @font-face {
-    font-family: 'Roboto';
-    src: url('../assets/fonts/Roboto-Regular.ttf');
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-*/

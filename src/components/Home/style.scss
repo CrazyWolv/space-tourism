@@ -17,8 +17,8 @@
     background-size: cover;
 
     .homepage-content{
-        width:70%;
-        padding-top:20vh;
+        width:80%;
+        padding-top:15vh;
         margin: auto auto;
     }
     
@@ -35,15 +35,15 @@
             font-size:13px;
             
             .homepage-flex-left--paragraph{
-                width:70%;
+                width:65%;
             }
         }
         
         .homepage-flex-right{
             width:30%;
             justify-content: center;
-            align-content: center;
-            align-items: center;
+            align-content: flex-end;
+            align-items: flex-end;
 
             .explore-button{
                 display:block;

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Route, Routes } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 // # Components
@@ -42,5 +43,13 @@ const App = () => {
     </>
   );
 }
+
+// App.propTypes = {
+//   HeaderNav:PropTypes.element,
+//   Home: PropTypes.element,
+//   Destination: PropTypes.element,
+//   Crew: PropTypes.element,
+//   Technology: PropTypes.element,
+// };
 
 export default App;

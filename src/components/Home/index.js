@@ -1,4 +1,5 @@
 // ##########  Everything needing import 🙂  ##########
+import PropTypes from 'prop-types';
 
 
 // # styles
@@ -28,5 +29,9 @@ const Home = () => {
         </div>
     )
 }
+
+//  Home.propTypes = {
+    //   ...
+// };
 
 export default Home;

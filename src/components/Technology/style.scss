@@ -11,7 +11,28 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    // Page Container/Content
+    .technology-content{
+        width:90%;
+        margin: auto auto;
+
+        // Flex Container
+        .technology-content--flex-container{
+    
+    
+            // Flex Content
+            .technology-content--flex-container--content{
+            
+            }
+
+        }
+
+    }
+
 }
+        
+        
 
 // ## Media queries for responsivness ##
 @media screen and (min-width: 1024px) {

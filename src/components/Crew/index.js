@@ -1,4 +1,6 @@
 // ##########  Everything needing import 🙂  ##########
+import PropTypes from 'prop-types';
+
 // # styles
 import './style.scss';
 import image from '../../assets/crew/image-douglas-hurley.png';
@@ -30,7 +32,7 @@ const Crew = ({data, isTablet, isMobile}) => {
                                 <div className='carousel-dot' /><div className='carousel-dot' /><div className='carousel-dot' />
                             </div>
                             <div className='crew-content--flex-container--content-carousel-nd-image--image'>
-                                <img src={image} alt='Crew member' title='crew member'/>
+                                {/* <img src={image} alt='Crew member' title='crew member'/> */}
                             </div>
                         </div>
                     </div>
@@ -39,5 +41,12 @@ const Crew = ({data, isTablet, isMobile}) => {
         </div>
     )
 }
+
+//  Crew.propTypes = {
+    //   data:PropTypes.object,
+    //   isMobile: PropTypes.element,
+    //   isTablet: PropTypes.element,
+    //   ...
+// };
 
 export default Crew;

@@ -1,4 +1,5 @@
 // ##########  Everything needing import 🙂  ##########
+import PropTypes from 'prop-types';
 
 
 // # styles
@@ -12,7 +13,11 @@ const Technology = ({data, isTablet, isMobile}) => {
 
     return (
         <div className="technology">
-            <div className="title"><span className='title-darkNumber'>03</span> Space launch 101</div>
+            <div className='technology-content'>
+                <div className="title"><span className='title-darkNumber'>03</span> Space launch 101</div>
+
+                <div className='technology-content--flex-container'>
+                    <div className='technology-content--flex-container--content'>
 
             1
             2
@@ -25,8 +30,18 @@ const Technology = ({data, isTablet, isMobile}) => {
             by analogy to the seaport for ships or airport for aircraft. Based in the 
             famous Cape Canaveral, our spaceport is ideally situated to take advantage 
             of the Earth’s rotation for launch.
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
+
+//  Technology.propTypes = {
+    //   data: PropTypes.object,
+    //   isMobile: PropTypes.element,
+    //   isTablet: PropTypes.element,
+    //   ...
+// };
 
 export default Technology;

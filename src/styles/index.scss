@@ -26,7 +26,7 @@ h5, .title, .subheading2, .navtext, .tabtext, .nav-link{
 }
 h1, .heading1{
 font-size:150px;
-margin:25px 0;
+padding:3rem 0;
 }
 
 h2{
@@ -66,10 +66,9 @@ letter-spacing: 4.75px;
 }
 
 .text{
-  font-family:vars.$secondary-font;
-  line-height:35px;
+  line-height:40px;
   color:vars.$text-color;
-  font-size:22px;
+  font-size:18px;
 }
 
 

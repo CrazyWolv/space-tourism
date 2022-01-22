@@ -14,6 +14,8 @@
 
     // Page Container/Content
     .crew-content{
+        width:90%;
+        margin: auto auto;
 
         // Flex Container
         .crew-content--flex-container{
@@ -47,22 +49,29 @@
                     // Dots Container
                     .crew-content--flex-container--content-carousel-nd-image--carousel{
                         display:flex;
+                        width:30%;
                         justify-content:space-around;
 
                         // Dots
                         .carousel-dot{
-                            width:10px;
-                            height:10px;
+                            width:30px;
+                            height:30px;
                             margin:10px 0;
                             background-color:vars.$dark-color;
                             cursor:pointer;
+                            border-radius:30px;
+                            -webkit-border-radius:30px;
+                            -moz-border-radius:30px;
+                            -ms-border-radius:30px;
+                            -o-border-radius:30px;
+
 
                             // Dots active
                             .cd-active{
                                 background-color:vars.$light-color;
                             }
-                        }
-
+}
+                        
                         // Dots Hover
                         .carousel-dot:hover{
                             background-color:vars.$hover-border;

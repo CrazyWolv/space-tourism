@@ -1,4 +1,6 @@
 // ##########  Everything needing import 🙂  ##########
+import PropTypes from 'prop-types';
+
 // # styles
 import './style.scss';
 import image from '../../assets/destination/image-moon.png';
@@ -51,5 +53,12 @@ const Destination = ({data, isTablet, isMobile}) => {
         </div>
     )
 }
+
+//  Destination.propTypes = {
+    //   data:PropTypes.object,
+    //   isMobile: PropTypes.element,
+    //   isTablet: PropTypes.element,
+    //   ...
+// };
 
 export default Destination;

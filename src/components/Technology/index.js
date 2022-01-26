@@ -1,23 +1,24 @@
 // ##########  Everything needing import 🙂  ##########
-import PropTypes from 'prop-types';
+// import { useState } from "react";
+import PropTypes from "prop-types";
 
 
 // # styles
-import './style.scss';
+import "./style.scss";
 
 
-//TODO:Carousel for technologies using a map
+//TODO:Set Order for technologies using CSS
 
 const Technology = ({data, isTablet, isMobile}) => {
     // console.log(data); //<-- OK
 
     return (
         <div className="technology">
-            <div className='technology-content'>
-                <div className="title"><span className='title-darkNumber'>03</span> Space launch 101</div>
+            <div className="technology-content">
+                <div className="title"><span className="title-darkNumber">03</span> Space launch 101</div>
 
-                <div className='technology-content--flex-container'>
-                    <div className='technology-content--flex-container--content'>
+                <div className="technology-content--flex-container">
+                    <div className="technology-content--flex-container--content">
 
             1
             2

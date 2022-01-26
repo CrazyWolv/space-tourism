@@ -25,6 +25,7 @@
             // Flex Content -- Image + Navbar & Text
             .destination-flex-content{
                 display:flex;
+                flex-direction: row-reverse;
                 justify-content:space-between;
         
                 // Image Container on the Left
@@ -39,7 +40,7 @@
                     // Navigation between Destinations
                     .destination-flex-allText--tabs{
                         width:70%;
-                        justify-content:space-between;
+                        gap:18%;
 
                         // Every Planet Destination Link
                         .tabtext{
@@ -52,8 +53,13 @@
                             -moz-transition: all 0.3s;
                             -ms-transition: all 0.3s;
                             -o-transition: all 0.3s;
-                          }
-                          
+
+                        }
+                        
+                        .moon--active, .mars--active, .europa--active, .titan--active{
+                            border-bottom:4px solid vars.$light-color;
+                        }
+
                           .tabtext:hover{
                             border-bottom:4px solid vars.$hover-border;
                             transition: all 0.3s;
@@ -62,10 +68,11 @@
                             -ms-transition: all 0.3s;
                             -o-transition: all 0.3s;
                           }
-                          
-                          .tabtext-active{
-                          border-bottom:4px solid vars.$light-color;
-                          }
+                    }
+
+                    // Planet Title
+                    h1{
+                        padding:2rem 0;
                     }
 
                     // Navbar & Suheading Containers (travel time/km)

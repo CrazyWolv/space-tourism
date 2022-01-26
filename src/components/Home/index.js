@@ -1,9 +1,9 @@
 // ##########  Everything needing import 🙂  ##########
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 
 // # styles
-import './style.scss';
+import "./style.scss";
 
 const Home = () => {
     return (

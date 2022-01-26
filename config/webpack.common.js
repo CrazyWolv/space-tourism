@@ -15,6 +15,7 @@ module.exports = {
     alias: {
       src: paths.src,
       app: paths.src,
+      assets:paths.src,
     },
   },
   plugins: [

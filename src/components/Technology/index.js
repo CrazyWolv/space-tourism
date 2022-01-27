@@ -1,5 +1,5 @@
 // ##########  Everything needing import 🙂  ##########
-// import { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 
@@ -10,6 +10,12 @@ import "./style.scss";
 //TODO:Set Order for technologies using CSS
 
 const Technology = ({data, isTablet, isMobile}) => {
+    // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS
+    const [technology, setTechnology] = useState("Spaceport");
+    const [isSpaceportActive, setSpaceportActive] = useState(true);
+    const [isLaunchVActive, setLaunchVActive] = useState(false);
+    const [isSpaceCapActive, setSpaceCapActive] = useState(false);
+
     // console.log(data); //<-- OK
 
     return (

@@ -11,13 +11,12 @@ import "./style.scss";
 const Destination = ({destinationData, isTablet, isMobile}) => {
     // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS
     const [destination, setDestination] = useState("Moon");
-    // const [isActive, setActive] = useState(false);
     const [isMoonActive, setMoonActive] = useState(true);
     const [isMarsActive, setMarsActive] = useState(false);
     const [isEuropaActive, setEuropaActive] = useState(false);
     const [isTitanActive, setTitanActive] = useState(false);
 
-    // == FUNCTION TO MANAGE THE CLICK ON PLANET NAMES
+    // == FUNCTION TO MANAGE THE CLICK ON PLANET NAMES + SET ACTIVE CLASS TO CSS
     const handleChange = (event, name) => {
         setDestination(name);
         switch (name) {

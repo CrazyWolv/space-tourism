@@ -1,8 +1,7 @@
 // ##########  Everything needing import 🙂  ##########
 // # Packages
-import { useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import { Route, Routes } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import PropTypes from "prop-types";
 
 
@@ -19,22 +18,25 @@ import "./style.scss";
 import data from "../../data/data.json";
 
 
-
 const App = () => {
-  //TODO : const + function to get screen size to manage responsivness on tablet & mobile
-  const isTablet = useMediaQuery({ query: "(max-width: 1224px)" });
+  // FUNCTIONS TO GET SCREEN SIZE TO MANAGE RESPONSIVNESS ON TABLET & MOBILE
+  const isTablet = useMediaQuery({ query: "(minWidth: 768, max-width: 1224px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
     
-  // console.log(data); //<-- OK
+
+  //  console.log(data); //<-- OK
+  //  console.log(isMobile); //<-- OK
+  //  console.log(isTablet); //<-- OK
+  //  console.log(isPortrait); //<-- OK
 
 
   return (
     <>
       <div className="app">
-        <HeaderNav isTablet={isTablet} isMobile={isMobile} />
+        <HeaderNav isMobile={isMobile} isTablet={isTablet} />
             
             <Routes>
-                <Route exact path="/" element={<Home isTablet={isTablet} isMobile={isMobile} />} />
+                <Route exact path="/" element={<Home isTablet={isTablet} isMobile={isMobile}  />} />
                 <Route exact path="/destinations" element={<Destination destinationData={data.destinations} isTablet={isTablet} isMobile={isMobile} />} />
                 <Route exact path="/crew" element={<Crew crewData={data.crew} isTablet={isTablet} isMobile={isMobile} />} />
                 <Route exact path="/technologies" element={<Technology techData={data.technology} isTablet={isTablet} isMobile={isMobile} />} />

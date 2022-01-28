@@ -55,8 +55,7 @@ const Crew = ({crewData, isTablet, isMobile}) => {
         return guy.role === crewRole
     });
 
-    // == FUNCTIONS TO REQUIRE IMAGES FROM JSON
-    
+    // == FUNCTION TO REQUIRE IMAGES FROM JSON & SLUGIFY NAMES TO MATCH WITH IMAGE'S NAME
     const img = (imgName) => {
         var slugify = require('slugify');
         
@@ -70,9 +69,9 @@ const Crew = ({crewData, isTablet, isMobile}) => {
 
     // EVERY CONSOLE.LOG TO KNOW IF EVERYTHING'S OKAY
     // console.log(data); //<-- OK
-    // console.log(img(destination)); // <-- OK
-    // console.log(weRgoingThere.images); // <-- OK
-    // console.log(isMoonActive, isMarsActive, isEuropaActive, isTitanActive); // <-- OK
+    // console.log(img(welcomeAboard.name)); // <-- OK
+    // console.log(welcomeAboard.images); // <-- OK
+    // console.log(isCommActive, isMissSpeActive, isPilotActive, isFlightActive); // <-- OK
     
     return (
         <div className="crew">
@@ -86,12 +85,12 @@ const Crew = ({crewData, isTablet, isMobile}) => {
 
                 <div className="crew-content--container">
                     <div className="crew-content--container--content">
-                        <div className="crew-content--flex-container-left">
-                            <div className="crew-content--flex-container-left--content-allText">
-                                <div className="crew-job">{crewRole}</div>
+                        <div className="crew-content--container--content-flex-container-left">
+                            <div className="crew-content--container--content-flex-container-left--content-allText">
+                                <div className="crew-content--container--content-flex-container-left--content-allText--crew-job">{crewRole}</div>
                                 <h2>{welcomeAboard.name}</h2>
 
-                                <div className="text crew-content--flex-container-left--content-allText--text">
+                                <div className="text crew-content--container--content-flex-container-left--content-allText--text">
                                     {welcomeAboard.bio}
                                     {/* STATIC CODE -- 
                                         Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 

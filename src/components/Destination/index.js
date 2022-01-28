@@ -58,9 +58,9 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
     // == FUNCTION TO REQUIRE IMAGES FROM JSON
     const img = (imgName) => {
         if(isMobile){
-            return require (`../../assets/destination/image-${imgName.toLowerCase()}.png`);
-        }else{
             return require (`../../assets/destination/image-${imgName.toLowerCase()}.webp`);
+        }else{
+            return require (`../../assets/destination/image-${imgName.toLowerCase()}.png`);
         }
     };
 
@@ -102,7 +102,7 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
                                 */}
                             </div>
 
-                            <h1>{ weRgoingThere.name }</h1>
+                            <div className="destination-flex-allText--title">{ weRgoingThere.name }</div>
 
                             <div className="text destination-flex-allText--text">
                                 { weRgoingThere.description }
@@ -113,6 +113,7 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
                                 */}
                             </div>
 
+                            <div className="text destination-flex-allText--line" />
                             <div className="destination-flex-allText--subheadings">
                                 <div className="column">
                                     <div className="subheading2">Avg. distance</div>

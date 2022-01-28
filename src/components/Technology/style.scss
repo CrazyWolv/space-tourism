@@ -15,23 +15,106 @@
     // Page Container/Content
     .technology-content{
         width:90%;
+        color:vars.$text-color;
         margin: auto auto;
 
-        // Flex Container
-        .technology-content--flex-container{
-    
-    
-            // Flex Content
-            .technology-content--flex-container--content{
+        &--image-container{
+            display:flex;
+            justify-content: right;
+            width:50%;
             
+            &--image{
+                position:absolute;
+                right:0;
+
+            }
+        }
+
+        // Flex Container
+        .technology-flex{
+            width:80%;
+            height:60vh;
+            display:flex;
+            flex-direction: row-reverse;
+            justify-content:space-between;
+            
+            // Flex Content
+            &-allText-nd-buttons{
+                display:flex;
+                justify-content:flex-start;
+                align-content: center;
+                align-items:center;
+                margin-left:7.5rem;
+                gap:10%; 
+
+                &--buttons-container{
+                    display:flex;
+                    flex-direction:column;
+                    
+                    &--button{
+                        display:flex;
+                        justify-content: center;
+                        align-items:center;
+                        align-content:center;
+                        margin:2vh 0;
+                        font-size:2rem;
+                        font-family:vars.$general-font;
+                        cursor:pointer;
+                        width:100px;
+                        height:100px;
+                        border:1px solid vars.$hover-border;
+                        border-radius:100px;
+                        -webkit-border-radius:100px;
+                        -moz-border-radius:100px;
+                        -ms-border-radius:100px;
+                        -o-border-radius:100px;
+                    }
+                    
+                    &--button:hover{
+                        border:2px solid grey;
+                    }
+
+                    .spaceport-active, .launchV-active, .spaceCap-active{
+                        background-color: vars.$light-color;
+                        color:vars.$dark-color;
+                        border:none;
+                    }
+
+                }
+
+                &--allText-container{
+                    margin-left:3rem;
+                    width:50%;
+                
+                    &--headingText{
+                        font-size:1.2rem;
+                        color:vars.$text-color;
+                        text-transform: uppercase;
+                        font-family:vars.$secondary-font;
+                        letter-spacing: 3px;
+                    }
+
+                    &--titleText{
+                        text-transform:uppercase;
+                        font-family:vars.$general-font;
+                        color:vars.$light-color;
+                        font-size:4rem;
+                        margin:25px 0;
+                    }
+
+                    &--description{
+                        width:77%;
+                        font-size:18px;
+                        letter-spacing: 0.5px;
+                        line-height:40px;
+                    }
+                }
             }
 
         }
 
     }
-
-}
-        
+}       
         
 
 // ## Media queries for responsivness ##

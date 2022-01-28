@@ -32,10 +32,12 @@
             width:50%;
             color:vars.$text-color;
             padding:20px;
-            font-size:13px;
             
             .homepage-flex-left--paragraph{
-                width:65%;
+                width:64%;
+                font-size:17px;
+                letter-spacing: 0.5px;
+                line-height:35px;
             }
         }
         

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 // # styles
 import "./style.scss";
 
-const Home = () => {
+const Home = ({isMobile, isTablet}) => {
     return (
         <div className="homepage">
             <div className="homepage-content">

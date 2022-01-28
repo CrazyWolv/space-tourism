@@ -16,41 +16,47 @@
     .crew-content{
         width:90%;
         margin: auto auto;
+        height:80%;
         
         // Crew Member's Photograph
-        .crew-content--flex--image-container{
+        &--flex--image-container{
             display:flex;
             width:40%;
             position:absolute;
             bottom:0;
-            right:0;
+            right:2%;
             
-            .crew-content--flex--image-container--image-container--content-img{
+            &--image-container--content-img{
                 position:relative;
             }
         }
         
         // Flex Container
-        .crew-content--container{
+        &--container{
             position:relative;
             width:100%;
+            height:80%;
 
             // Flex Content
-            .crew-content--container--content{
+            &--content{
                 width:50%;
         
 
                 // Left Container (text + Carousel)
-                .crew-content--flex-container-left{
+                &-flex-container-left{
                     display:flex;
                     flex-direction: column;
-                    margin-left:5rem;
-
+                    margin-left:7.5rem;
+                    
                     // All Text
-                    .crew-content--flex-container-left--content-allText{
+                    &--content-allText{
+                        margin:5% 0;
+                        justify-content:center;
+                        align-content:center;
+                        align-items:center;
                         
                         // Crewmember's Job
-                        .crew-job{
+                        &--crew-job{
                             font-size:2.5rem;
                             text-transform: uppercase;
                             font-family: vars.$general-font;
@@ -62,8 +68,8 @@
                         }
 
                         // Paragraph
-                        .crew-content--flex-container-left--content-allText--text{
-                            width:58%;
+                        &--text{
+                            width:60%;
                         }
                     }
 
@@ -73,16 +79,16 @@
             
         }
         // Dots Container
-        .crew-content--container--carousel{
+        &--container--carousel{
             position:absolute;
-            height:20vh;
-            bottom:0;
             width:15%;
-            margin-left:5rem;
+            margin-left:7.5rem;
             
-            .crew-content--container--carousel--content{
+            &--content{
                 position:relative;
                 display:flex;
+                align-content: flex-end;
+                align-items:flex-end;
                 gap:15%;
 
 
@@ -105,11 +111,6 @@
                     -o-transition: all 0.3s;
                 }
 
-                // Dots active
-                .comm--active, .missSpe--active, .pilot--active, .flight--active{
-                    background-color:vars.$light-color;
-                }
-                
                 // Dots Hover
                 .carousel-dot:hover{
                     background-color:grey;
@@ -119,6 +120,15 @@
                     -ms-transition: all 0.3s;
                     -o-transition: all 0.3s;
                 }
+                
+                // Dots active
+                .comm--active, .missSpe--active, .pilot--active, .flight--active{
+                    background-color:vars.$light-color;
+                }
+                .comm--active:hover, .missSpe--active:hover, .pilot--active:hover, .flight--active:hover{
+                    background-color:vars.$light-color;
+                }
+                
             }
         }
     }

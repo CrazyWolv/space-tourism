@@ -14,34 +14,40 @@
 
     // Page Container/Content
     .crew-content{
-        position:relative;
         width:90%;
         margin: auto auto;
-
+        
+        // Crew Member's Photograph
+        .crew-content--flex--image-container{
+            display:flex;
+            width:40%;
+            position:absolute;
+            bottom:0;
+            right:0;
+            
+            .crew-content--flex--image-container--image-container--content-img{
+                position:relative;
+            }
+        }
+        
         // Flex Container
-        .crew-content--flex-container{
+        .crew-content--container{
+            position:relative;
             width:100%;
-            // background-color: aqua;
-    
-            // Flex Content
-            .crew-content--flex-container--content{
-                display:flex;
-                flex-direction: row-reverse;
-                justify-content:space-between;
 
-                // background-color: rgb(150, 240, 240);
+            // Flex Content
+            .crew-content--container--content{
+                width:50%;
         
 
                 // Left Container (text + Carousel)
                 .crew-content--flex-container-left{
                     display:flex;
-                    width:50%;
                     flex-direction: column;
                     margin-left:5rem;
 
                     // All Text
                     .crew-content--flex-container-left--content-allText{
-                        // background-color: rgb(146, 124, 204);
                         
                         // Crewmember's Job
                         .crew-job{
@@ -57,73 +63,66 @@
 
                         // Paragraph
                         .crew-content--flex-container-left--content-allText--text{
-                            // background-color: rgb(142, 97, 172);
                             width:58%;
                         }
                     }
 
-                    // Dots Container
-                    .crew-content--flex-container-left--content--carousel{
-                        // background-color: rgb(69, 165, 93);
-                        display:flex;
-                        width:30%;
-                        justify-content:space-around;
+                    
+                }                
+            }
+            
+        }
+        // Dots Container
+        .crew-content--container--carousel{
+            position:absolute;
+            height:20vh;
+            bottom:0;
+            width:15%;
+            margin-left:5rem;
+            
+            .crew-content--container--carousel--content{
+                position:relative;
+                display:flex;
+                gap:15%;
 
-                        // Dots
-                        .carousel-dot{
-                            width:20px;
-                            height:20px;
-                            margin:10px 0;
-                            background-color:rgb(77, 77, 77);
-                            cursor:pointer;
-                            border-radius:30px;
-                            -webkit-border-radius:30px;
-                            -moz-border-radius:30px;
-                            -ms-border-radius:30px;
-                            -o-border-radius:30px;
-                            transition: all 0.3s;
-                            -webkit-transition: all 0.3s;
-                            -moz-transition: all 0.3s;
-                            -ms-transition: all 0.3s;
-                            -o-transition: all 0.3s;
-                        }
 
-                        // Dots active
-                        .comm--active, .missSpe--active, .pilot--active, .flight--active{
-                            background-color:vars.$light-color;
-                        }
-                        
-                        // Dots Hover
-                        .carousel-dot:hover{
-                            background-color:grey;
-                            transition: all 0.3s;
-                            -webkit-transition: all 0.3s;
-                            -moz-transition: all 0.3s;
-                            -ms-transition: all 0.3s;
-                            -o-transition: all 0.3s;
-                        }
-
-                    }
+                // Dots
+                .carousel-dot{
+                    width:20px;
+                    height:20px;
+                    margin:10px 0;
+                    background-color:rgb(77, 77, 77);
+                    cursor:pointer;
+                    border-radius:30px;
+                    -webkit-border-radius:30px;
+                    -moz-border-radius:30px;
+                    -ms-border-radius:30px;
+                    -o-border-radius:30px;
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
                 }
 
-                // Crew Member's Photograph
-                    .crew-content--flex--container-right--content--image{
-                        // background-color: rgb(202, 190, 75);
-                        width:60%;
-                        display:flex;
-                        justify-content:center;
-                        
-                        img{
-                            display:block;
-                            position:relative;
-                            bottom:0;
-                        }
-                    }
+                // Dots active
+                .comm--active, .missSpe--active, .pilot--active, .flight--active{
+                    background-color:vars.$light-color;
                 }
-
+                
+                // Dots Hover
+                .carousel-dot:hover{
+                    background-color:grey;
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
                 }
             }
         }
+    }
+}
 
 
 // ## Media queries for responsivness ##

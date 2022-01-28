@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 // # styles
 import "./style.scss";
-import image from "../../assets/crew/image-douglas-hurley.png";
+// import image from "../../assets/crew/image-douglas-hurley.png"; // <-- STATIC IMPORT
 
 //TODO:Set Order for crew members using CSS
 
@@ -78,50 +78,51 @@ const Crew = ({crewData, isTablet, isMobile}) => {
         <div className="crew">
             <div className="crew-content">
                 <div className="title"><span className="title-darkNumber">02</span> Meet your crew</div>
-
-                <div className="crew-content--flex-container">
-                    <div className="crew-content--flex-container--content">
-                        <div className="crew-content--flex--container-right--content--image">
-                            <img src={img(welcomeAboard.name.toLowerCase())} alt={`${welcomeAboard.name}`} title={`${welcomeAboard.name}`}/>
-                        </div>
-
-                    <div className="crew-content--flex-container-left">
-                        <div className="crew-content--flex-container-left--content-allText">
-                            <div className="crew-job">{crewRole}</div>
-                            <h2>{welcomeAboard.name}</h2>
-
-                            <div className="text crew-content--flex-container-left--content-allText--text">
-                                {welcomeAboard.bio}
-                                {/* STATIC CODE -- 
-                                    Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-                                    and former NASA astronaut. He launched into space for the third time as 
-                                    commander of Crew Dragon Demo-2. 
-                                */}
+                        <div className="crew-content--flex--image-container">
+                            <div className="crew-content--flex--image-container--content-img">
+                                <img src={img(welcomeAboard.name.toLowerCase())} alt={`${welcomeAboard.name}`} title={`${welcomeAboard.name}`}/>
                             </div>
                         </div>
 
-                        <div className="crew-content--flex-container-left--content--carousel">
-                                {crewData.map(crewMember => {
-                                        const isActive = (job) => {
-                                            if(job==="Commander" && isCommActive){
-                                                return `comm--active`;
-                                            }else if(job==="Mission Specialist" && isMissSpeActive){
-                                                return `missSpe--active`;
-                                            }else if(job==="Pilot" && isPilotActive){
-                                                return `pilot--active`;
-                                            }else if(job==="Flight Engineer" && isFlightActive){
-                                                return `flight--active`;
-                                            }
-                                        }
-                                            return <div className={`carousel-dot ${isActive(crewMember.role)}`} key={crewMember.name} onClick={(event) => {handleChange(event, crewMember.role)}} />
-                                            })
-                                    }
-                                    {/* STATIC CODE --
-                                        <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" /> 
-                                    */}
-                        </div>
+                <div className="crew-content--container">
+                    <div className="crew-content--container--content">
+                        <div className="crew-content--flex-container-left">
+                            <div className="crew-content--flex-container-left--content-allText">
+                                <div className="crew-job">{crewRole}</div>
+                                <h2>{welcomeAboard.name}</h2>
 
+                                <div className="text crew-content--flex-container-left--content-allText--text">
+                                    {welcomeAboard.bio}
+                                    {/* STATIC CODE -- 
+                                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+                                        and former NASA astronaut. He launched into space for the third time as 
+                                        commander of Crew Dragon Demo-2. 
+                                    */}
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div className="crew-content--container--carousel">
+                    <div className="crew-content--container--carousel--content">
+                        {crewData.map(crewMember => {
+                            const isActive = (job) => {
+                                if(job==="Commander" && isCommActive){
+                                    return `comm--active`;
+                                        }else if(job==="Mission Specialist" && isMissSpeActive){
+                                            return `missSpe--active`;
+                                        }else if(job==="Pilot" && isPilotActive){
+                                            return `pilot--active`;
+                                        }else if(job==="Flight Engineer" && isFlightActive){
+                                            return `flight--active`;
+                                        }
+                                    }
+                                        return <div className={`carousel-dot ${isActive(crewMember.role)}`} key={crewMember.name} onClick={(event) => {handleChange(event, crewMember.role)}} />
+                                        })
+                                    }
+                        {/* STATIC CODE --
+                            <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" /> 
+                        */}
                     </div>
                 </div>
             </div>

@@ -129,8 +129,51 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        .technology-content{
+            width:90%;
+            color:vars.$text-color;
+            margin: auto auto;
+    
+            &--image-container{
+                display:flex;
+                justify-content: right;
+                width:50%;
+                
+                &--image{
+                    position:absolute;
+                    right:0;
+    
+                }
+            }
+
+            // Flex Container
+            .technology-flex{
+                width:80%;
+                height:60vh;
+                display:flex;
+                flex-direction: row-reverse;
+                justify-content:space-between;
+                
+                // Flex Content
+                &-allText-nd-buttons{
+                    display:flex;
+                    justify-content:flex-start;
+                    align-content: center;
+                    align-items:center;
+                    margin-left:7.5rem;
+                    gap:10%; 
+    
+                    &--buttons-container{
+                        display:flex;
+                        flex-direction:column;
+                    }
+                }
+            }
+        }
     }
 }
+
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
     .technology{
@@ -139,5 +182,48 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    
+        .technology-content{
+            width:90%;
+            color:vars.$text-color;
+            margin: auto auto;
+            text-align:center;
+    
+            &--image-container{
+                display:flex;
+                justify-content: right;
+                width:50%;
+                
+                &--image{
+                    position:relative;
+                    right:0;
+    
+                }
+            }
+
+            // Flex Container
+            .technology-flex{
+                width:80%;
+                height:60vh;
+                display:flex;
+                flex-direction: column-reverse;
+                justify-content:space-between;
+                
+                // Flex Content
+                &-allText-nd-buttons{
+                    display:flex;
+                    justify-content:flex-start;
+                    align-content: center;
+                    align-items:center;
+                    margin-left:7.5rem;
+                    gap:10%; 
+    
+                    &--buttons-container{
+                        display:flex;
+                        flex-direction:row;
+                    }
+                }
+            }
+        }
     }
 }

@@ -36,6 +36,7 @@ dist/
 .env.test.local
 .env.production.local
 
+README.old.md
 TODOLIST.md
 
 npm-debug.log*

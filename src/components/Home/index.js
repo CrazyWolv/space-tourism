@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 // # styles
 import "./style.scss";
 
-const Home = ({isMobile, isTablet}) => {
+const Home = () => {
     return (
         <div className="homepage">
             <div className="homepage-content">
@@ -20,7 +20,7 @@ const Home = ({isMobile, isTablet}) => {
                         </div>
                     </div>
                     <div className="homepage-flex-right">
-                        <button className="explore-button">
+                        <button className="homepage-flex-right--explore-button">
                             <a href="/destinations">Explore</a>
                         </button>
                     </div>

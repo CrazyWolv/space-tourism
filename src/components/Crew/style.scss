@@ -5,6 +5,7 @@
 
 
 // ## Styling Component ##
+// Whole Page -- background
 .crew{
     background:url('/assets/crew/background-crew-desktop.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -17,142 +18,239 @@
         width:90%;
         margin: auto auto;
         height:80%;
-        
-        // Crew Member's Photograph
-        &--flex--image-container{
-            display:flex;
-            width:40%;
-            position:absolute;
-            bottom:0;
-            right:2%;
-            
-            &--image-container--content-img{
-                position:relative;
-            }
-        }
-        
-        // Flex Container
-        &--container{
-            position:relative;
-            width:100%;
-            height:80%;
 
-            // Flex Content
-            &--content{
-                width:50%;
-        
+        // # Flex whole container
+        &--flex{
 
-                // Left Container (text + Carousel)
-                &-flex-container-left{
-                    display:flex;
-                    flex-direction: column;
-                    margin-left:7.5rem;
-                    
-                    // All Text
-                    &--content-allText{
-                        margin:5% 0;
-                        justify-content:center;
-                        align-content:center;
-                        align-items:center;
-                        
-                        // Crewmember's Job
-                        &--crew-job{
-                            font-size:2.5rem;
-                            text-transform: uppercase;
-                            font-family: vars.$general-font;
-                            color:vars.$secondary-color;
-                        }
-
-                        h2{
-                            font-size:4rem;
-                        }
-
-                        // Paragraph
-                        &--text{
-                            width:60%;
-                        }
-                    }
-
-                    
-                }                
-            }
-            
-        }
-        // Dots Container
-        &--container--carousel{
-            position:absolute;
-            width:15%;
-            margin-left:7.5rem;
-            
-            &--content{
-                position:relative;
+            // Crew Member's Photograph
+            &--image-container{
                 display:flex;
-                align-content: flex-end;
-                align-items:flex-end;
-                gap:15%;
-
-
-                // Dots
-                .carousel-dot{
-                    width:20px;
-                    height:20px;
-                    margin:10px 0;
-                    background-color:rgb(77, 77, 77);
-                    cursor:pointer;
-                    border-radius:30px;
-                    -webkit-border-radius:30px;
-                    -moz-border-radius:30px;
-                    -ms-border-radius:30px;
-                    -o-border-radius:30px;
-                    transition: all 0.3s;
-                    -webkit-transition: all 0.3s;
-                    -moz-transition: all 0.3s;
-                    -ms-transition: all 0.3s;
-                    -o-transition: all 0.3s;
-                }
-
-                // Dots Hover
-                .carousel-dot:hover{
-                    background-color:grey;
-                    transition: all 0.3s;
-                    -webkit-transition: all 0.3s;
-                    -moz-transition: all 0.3s;
-                    -ms-transition: all 0.3s;
-                    -o-transition: all 0.3s;
-                }
+                width:40%;
+                position:absolute;
+                bottom:0;
+                right:2%;
                 
-                // Dots active
-                .comm--active, .missSpe--active, .pilot--active, .flight--active{
-                    background-color:vars.$light-color;
+                &--content-img{
+                    position:relative;
                 }
-                .comm--active:hover, .missSpe--active:hover, .pilot--active:hover, .flight--active:hover{
-                    background-color:vars.$light-color;
+            }
+
+            // Text Container
+            &--textContainer{
+                position:relative;
+                width:100%;
+                height:80%;
+    
+                // Text Container's Content
+                &--content{
+                    width:50%;
+            
+    
+                    // Flex Text Container
+                    &-flex-container{
+                        display:flex;
+                        flex-direction: column;
+                        margin-left:7.5rem;
+                        
+                        // All Text
+                        &--content-allText{
+                            margin:5% 0;
+                            justify-content:center;
+                            align-content:center;
+                            align-items:center;
+                            
+                            // Crewmember's Job
+                            &--crew-job{
+                                font-size:2.5rem;
+                                text-transform: uppercase;
+                                font-family: vars.$general-font;
+                                color:vars.$secondary-color;
+                            }
+    
+                            h2{
+                                font-size:4rem;
+                            }
+    
+                            // Crewmember's Bio
+                            &--bio{
+                                width:60%;
+                            }
+                        }
+    
+                        
+                    }                
                 }
                 
             }
+
+            // Dots Container
+            &--carousel-container{
+                position:absolute;
+                width:15%;
+                margin-left:7.5rem;
+                
+                &--carousel{
+                    position:relative;
+                    display:flex;
+                    align-content: flex-end;
+                    align-items:flex-end;
+                    gap:15%;
+    
+    
+                    // Dots
+                    .carousel-dot{
+                        width:20px;
+                        height:20px;
+                        margin:10px 0;
+                        background-color:rgb(77, 77, 77);
+                        cursor:pointer;
+                        border-radius:30px;
+                        -webkit-border-radius:30px;
+                        -moz-border-radius:30px;
+                        -ms-border-radius:30px;
+                        -o-border-radius:30px;
+                        transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                    }
+    
+                    // Dots Hover
+                    .carousel-dot:hover{
+                        background-color:grey;
+                        transition: all 0.3s;
+                        -webkit-transition: all 0.3s;
+                        -moz-transition: all 0.3s;
+                        -ms-transition: all 0.3s;
+                        -o-transition: all 0.3s;
+                    }
+                    
+                    // Dots active
+                    .comm--active, .missSpe--active, .pilot--active, .flight--active{
+                        background-color:vars.$light-color;
+                    }
+                    .comm--active:hover, .missSpe--active:hover, .pilot--active:hover, .flight--active:hover{
+                        background-color:vars.$light-color;
+                    }
+                    
+                }
+            }
+
         }
+        
+        
     }
 }
 
 
-// ## Media queries for responsivness ##
-@media screen and (min-width: 1024px) {
-    
-}
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    // Whole Page -- background
     .crew{
-        background:url('/assets/crew/background-crew-tablet.jpg') no-repeat center center fixed; 
+        background:url('/assets/crew/background-crew-tablet.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+         // Page Container/Content
+        .crew-content{
+            width:90%;
+            margin: auto auto;
+            height:200vh;
+            
+            &--flex{
+                display:flex;
+                flex-direction: column;
+                align-items:center;
+                text-align: center;
+            
+            // Crew Member's Photograph
+            &--image-container{
+                order:3;
+                position:relative;
+                justify-content:center;
+                width:100%;
+                right:0;
+                bottom:0;
+
+                img{
+                    width:70%;
+                }
+
+            }
+            
+            // Flex Container
+            &--textContainer{
+                height:auto;
+
+
+                // Flex Content
+                &--content{
+                    width:100%;
+            
+
+                    // Left Container (text + Carousel)
+                    &-flex-container{
+                        margin-left:0;
+                        
+                        // All Text
+                        &--content-allText{
+                            margin:10% 0 0 0;
+                            
+                            // Crewmember's Job
+                            &--crew-job{
+                                font-size:2rem;
+                                text-transform: uppercase;
+                                font-family: vars.$general-font;
+                                color:vars.$secondary-color;
+                            }
+
+                            h2{
+                                font-size:3.5rem;
+                            }
+
+                            // Crewmember's Bio
+                            &--bio{
+                                width:90%;
+                                margin:auto auto;
+                            }
+                        }
+
+                        
+                    }                
+                }
+                
+            }
+            // Dots Container
+            &--carousel-container{
+                position:relative;
+                margin-left:0;
+                
+                &--carousel{
+                    display:flex;
+                    align-content: flex-end;
+                    align-items:flex-end;
+
+                        // Dots
+                        .carousel-dot{
+                            width:15px;
+                            height:15px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+
+
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
+    // Whole Page -- background
     .crew{
-        background:url('/assets/crew/background-crew-mobile.jpg') no-repeat center center fixed; 
+        background:url('/assets/crew/background-crew-mobile.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

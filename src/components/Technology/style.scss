@@ -124,7 +124,7 @@
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .technology{
-        background:url('/assets/technology/background-technology-tablet.jpg') no-repeat center center fixed; 
+        background:url('/assets/technology/background-technology-tablet.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -177,7 +177,7 @@
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
     .technology{
-        background:url('/assets/technology/background-technology-mobile.jpg') no-repeat center center fixed; 
+        background:url('/assets/technology/background-technology-mobile.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

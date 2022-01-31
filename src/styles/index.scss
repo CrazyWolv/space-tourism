@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Open+Sans:wght@300;400&display=swap');
 
 
-// # general styling
+// # general styling -- body
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,16 +14,19 @@ body {
   color:#fff;
 }
 
-// # all titles & subtitles
+// # ALL TITLES & SUBTITLES
 h1, h2, h3, h4, .heading1, .subheading1{
   text-transform:uppercase;
 font-family:vars.$general-font;
 color:vars.$light-color;
 }
+
 h5, .title, .subheading2, .navtext, .tabtext, .nav-link{
   text-transform:uppercase;
   font-family:vars.$secondary-font;
 }
+
+// # MAIN TITLE
 h1, .heading1{
 font-size:150px;
 padding:3rem 0;
@@ -33,12 +36,15 @@ h2{
   font-size:100px;
   margin:25px 0;
 }
+
 h3{
   font-size:56px;
 }
+
 h4{
   font-size:32px;
 }
+
 h5, .title{
 color:vars.$text-color;
 font-size:28px;
@@ -54,17 +60,21 @@ letter-spacing: 4.75px;
   padding:1rem 0;
 }
 
+
+// # Page's title
 .title{
   color:vars.$light-color;
   margin:5rem 0 3rem 7.5rem;
 }
 
+// # Page's title's number
 .title-darkNumber{
   opacity:vars.$title-opacity;
   padding-right:20px;
   font-weight:bolder;
 }
 
+// # General text (paragraph, tabs)
 .text{
   line-height:40px;
   color:vars.$text-color;
@@ -72,8 +82,56 @@ letter-spacing: 4.75px;
 }
 
 
-// # Every page from the app
+// # Every page from the app -- padding & spacing from header, page's height
 .homepage, .crew, .technology, .destinations{
   padding-top:vars.$space-from-header;
   height:vars.$page-height;
+}
+
+
+// # Media query -- TABLET
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  // # ALL TITLES & SUBTITLES
+  // # MAIN TITLE
+    h1, .heading1{
+      padding:1.5rem 0 1.5rem 0;
+      font-size:160px;
+  }
+
+  h5, .title{
+    font-size:23px;
+    }
+
+  // # Page's title
+  .title{
+    margin:0 0 0 1rem;
+  }
+
+  // # Page's title's number
+  .title-darkNumber{
+    padding-right:10px;
+  }
+
+  // # Page's text
+  .text{
+    line-height:35px;
+    color:vars.$text-color;
+    font-size:16px;
+  }
+
+  // # Every page from the app -- padding & spacing from header, page's height
+  .homepage, .crew, .technology, .destinations{
+    padding-top:vars.$space-from-header-tablet;
+    height:vars.$page-height-tablet;
+  }
+}
+
+// # Media query -- MOBILE
+@media screen and (max-width: 767px) {
+
+  // # Every page from the app -- padding & spacing from header, page's height
+  .homepage, .crew, .technology, .destinations{
+    padding-top:vars.$space-from-header-mobile;
+    height:vars.$page-height-mobile;
+  }
 }

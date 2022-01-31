@@ -24,7 +24,7 @@ const App = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
     
 
-  //  console.log(data); //<-- OK
+  // console.log(data); //<-- OK
   //  console.log(isMobile); //<-- OK
   //  console.log(isTablet); //<-- OK
   //  console.log(isPortrait); //<-- OK
@@ -36,9 +36,9 @@ const App = () => {
         <HeaderNav isMobile={isMobile} isTablet={isTablet} />
             
             <Routes>
-                <Route exact path="/" element={<Home isTablet={isTablet} isMobile={isMobile}  />} />
-                <Route exact path="/destinations" element={<Destination destinationData={data.destinations} isTablet={isTablet} isMobile={isMobile} />} />
-                <Route exact path="/crew" element={<Crew crewData={data.crew} isTablet={isTablet} isMobile={isMobile} />} />
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/destinations" element={<Destination destinationData={data.destinations} />} />
+                <Route exact path="/crew" element={<Crew crewData={data.crew} />} />
                 <Route exact path="/technologies" element={<Technology techData={data.technology} isTablet={isTablet} isMobile={isMobile} />} />
             </Routes>
       </div>
@@ -47,11 +47,11 @@ const App = () => {
 }
 
 // App.propTypes = {
-//   HeaderNav:PropTypes.element,
-//   Home: PropTypes.element,
-//   Destination: PropTypes.element,
-//   Crew: PropTypes.element,
-//   Technology: PropTypes.element,
+//   HeaderNav:PropTypes.elementType.isRequired,
+//   Home: PropTypes.elementType.isRequired,
+//   Destination: PropTypes.elementType.isRequired,
+//   Crew: PropTypes.elementType.isRequired,
+//   Technology: PropTypes.elementType.isRequired,
 // };
 
 export default App;

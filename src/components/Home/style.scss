@@ -5,10 +5,12 @@
 
 
 // ## Styling Component ##
+// # Common properties
 .homepage-flex, .homepage-flex-left, .homepage-flex-right{
     display:flex;
 }
 
+// # The whole page -- background
 .homepage{
     background:url('/assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -16,24 +18,27 @@
     -o-background-size: cover;
     background-size: cover;
 
+    // # Page content
     .homepage-content{
         width:80%;
         padding-top:15vh;
         margin: auto auto;
     }
-    
+
+    // # Flex container
     .homepage-flex{
         justify-content:space-around;
 
-        
-        .homepage-flex-left{
+        // # Left Container -- text
+        &-left{
             flex-direction: column;
             position:relative;
             width:50%;
             color:vars.$text-color;
             padding:20px;
             
-            .homepage-flex-left--paragraph{
+            // # Left container's paragraph text
+            &--paragraph{
                 width:64%;
                 font-size:17px;
                 letter-spacing: 0.5px;
@@ -41,13 +46,15 @@
             }
         }
         
-        .homepage-flex-right{
+        // # Right container -- button
+        &-right{
             width:30%;
             justify-content: center;
             align-content: flex-end;
             align-items: flex-end;
 
-            .explore-button{
+            // # Button itself
+            &--explore-button{
                 display:block;
                 width: 300px;
                 height: 300px;
@@ -57,7 +64,7 @@
                 outline:1px solid vars.$light-color;
                 background-color:vars.$light-color;
                 color:vars.$dark-color;
-                font-size:2.5rem;
+                font-size:2.3rem;
                 font-family:vars.$general-font;
                 text-transform: uppercase;
                 transition: all 1s ease-in-out;
@@ -65,9 +72,10 @@
                 -moz-transition: all 1s ease-in-out;
                 -ms-transition: all 1s ease-in-out;
                 -o-transition: all 1s ease-in-out;
-}
+            }
             
-            .explore-button:hover{
+            // # Button effect on hover
+            &--explore-button:hover{
                 text-shadow: 0px 4px 4px rgba(0,0,0,0.5);
                 outline:50px solid rgba(255,255,255, 0.3);
                 transition: all 1s ease-in-out;
@@ -75,21 +83,76 @@
                 -moz-transition: all 1s ease-in-out;
                 -ms-transition: all 1s ease-in-out;
                 -o-transition: all 1s ease-in-out;
+            }
+        }
+    }
+    
 }
+
+
+
+// # Media query -- TABLET
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    // # The whole page -- background
+    .homepage{
+        background:url('/assets/home/background-home-tablet.jpg') no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        // # Page content
+        .homepage-content{
+            width:100%;
+            padding-top:0vh;
+            text-align:center;
+            overflow: scroll;
+        }
+        
+        // # Flex container
+        .homepage-flex{
+            flex-direction: column;
+            
+            // # Left Container -- text
+            &-left{
+                margin-top:5%;
+                width:100%;
+                align-items: center;
+                height:50vh;
+                
+                // # Left container's paragraph text
+                &--paragraph{
+                    width:70%;
+                }
+            }
+            
+            // # Right container -- button
+            &-right{
+                width:100%;
+    
+                // # Button itself
+                &--explore-button{
+                    width: 270px;
+                    height: 270px;
+                    border-radius: 50%;
+                }
+            }   
         }
     }
 }
 
 
-// ## Media queries for responsivness ##
-@media screen and (min-width: 1024px) {
-    
-}
-// # Media query -- TABLET
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-}
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
 
+    // # The whole page -- background
+    .homepage{
+        background:url('/assets/home/background-home-mobile.jpg') no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    
     }
+}

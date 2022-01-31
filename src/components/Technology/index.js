@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 // # styles
 import "./style.scss";
-import image from "../../assets/technology/image-launch-vehicle-portrait.jpg"; // <-- STATIC IMPORT
+// import image from "../../assets/technology/image-launch-vehicle-portrait.jpg"; // <-- STATIC IMPORT
 
 
 //TODO:Set Order for technologies using CSS
@@ -46,9 +46,6 @@ const Technology = ({techData, isTablet, isMobile}) => {
         return vehicle.name === technology
     });
 
-    // function nb(){
-    //     i=1;
-    // }
 
     // == FUNCTION TO REQUIRE IMAGES FROM JSON & SLUGIFY NAMES TO MATCH WITH IMAGE'S NAME
     const img = (imgName) => {
@@ -62,7 +59,7 @@ const Technology = ({techData, isTablet, isMobile}) => {
     };
 
     // EVERY CONSOLE.LOG TO KNOW IF EVERYTHING'S OKAY
-    // console.log(data); //<-- OK
+    // console.log(techData); //<-- OK
     // console.log(img(technology)); // <-- OK
 
     return (
@@ -92,14 +89,16 @@ const Technology = ({techData, isTablet, isMobile}) => {
                                 
                                 const isActive = (name) => {
                                     if(name==="Launch vehicle" && isLaunchVActive){
-                                        return `launchV-active`;
+                                        return "technology-flex-allText-nd-buttons--buttons-container--button launchV-active";
                                             }else if(name==="Spaceport" && isSpaceportActive){
-                                                return `spaceport-active`;
+                                                return "technology-flex-allText-nd-buttons--buttons-container--button spaceport-active";
                                             }else if(name==="Space capsule" && isSpaceCapActive){
-                                                return `spaceCap-active`;
+                                                return "technology-flex-allText-nd-buttons--buttons-container--button spaceCap-active";
+                                            }else{
+                                                return "technology-flex-allText-nd-buttons--buttons-container--button"
                                             }
                                         }
-                                        return <div className={`technology-flex-allText-nd-buttons--buttons-container--button ${isActive(vehicle.name)}`} key={vehicle.name} onClick={(event) => {handleChange(event, vehicle.name)}}>
+                                        return <div className={isActive(vehicle.name)} key={vehicle.name} onClick={(event) => {handleChange(event, vehicle.name)}}>
                                              {setButtonNumber(vehicle.name)}
                                         </div>
                             })}
@@ -132,11 +131,16 @@ const Technology = ({techData, isTablet, isMobile}) => {
     )
 }
 
-//  Technology.propTypes = {
-    //   data: PropTypes.object,
-    //   isMobile: PropTypes.element,
-    //   isTablet: PropTypes.element,
-    //   ...
-// };
+Technology.propTypes = {
+    techData:PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            images: PropTypes.object.isRequired,
+            description: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    isTablet:PropTypes.bool.isRequired,
+    isMobile:PropTypes.bool.isRequired,
+}
 
 export default Technology;

@@ -5,6 +5,8 @@
 
 
 // ## Styling Component ##
+
+// # The whole page -- background
 .destinations{
     background:url('/assets/destination/background-destination-desktop.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -12,23 +14,23 @@
     -o-background-size: cover;
     background-size: cover;
 
-    // Page Content
+    // # Page Content
     .destinations-content{
         width:90%;
         margin: auto auto;
 
-        // Flex Container
+        // # Flex Container
         .destination-flex{
             width:80%;
             margin: auto auto;
 
-            // Flex Content -- Image + Navbar & Text
+            // # Flex Content -- Image + Navbar & Text
             &-content{
                 display:flex;
                 flex-direction: row-reverse;
                 justify-content:space-between;
         
-                // Image Container on the Left
+                // # Image Container on the Left
                 .destination-flex-image{
                     display:flex;
                     align-content:center;
@@ -36,50 +38,48 @@
                     justify-content:center;
                 }
     
-                // Text Container on the Right
+                // # Text Container on the Right
                 .destination-flex-allText{
                     width:50%;
 
-                    // Navigation between Destinations
+                    // # Navigation between Destinations
                     &--tabs{
                         width:40%;
                         gap:18%;
 
-                        // Every Planet Destination Link
+                        // # Every Planet Destination Link
                         .tabtext{
                             color:vars.$text-color;
                             font-size:16px;
                             letter-spacing: 2.7px;
-                            padding-bottom:10px;
+                            padding-bottom:15px;
                             cursor:pointer;
                             transition: color 0.3s;
                             -webkit-transition: color 0.3s;
                             -moz-transition: color 0.3s;
                             -ms-transition: color 0.3s;
                             -o-transition: color 0.3s;
-}
+                        }
                         
+                        // # Every Planet Destination Link effect on hover
                         .tabtext:hover{
                             color:vars.$light-color;
-                            border-bottom:2px solid vars.$hover-border;
+                            border-bottom:4px solid vars.$hover-border;
                             transition: color 0.3s;
                             -webkit-transition: color 0.3s;
                             -moz-transition: color 0.3s;
                             -ms-transition: color 0.3s;
                             -o-transition: color 0.3s;
-}
-
-                        .moon--active, .mars--active, .europa--active, .titan--active{
-                            color:vars.$light-color;
-                            border-bottom:2px solid vars.$light-color;
                         }
-                        .moon--active:hover, .mars--active:hover, .europa--active:hover, .titan--active:hover{
+
+                        // # Every Planet Destination Link -- active & hover
+                        .moon--active, .moon--active:hover, .mars--active, .mars--active:hover, .europa--active, .europa--active:hover, .titan--active, .titan--active:hover{
                             color:vars.$light-color;
-                            border-bottom:2px solid vars.$light-color;
+                            border-bottom:4px solid vars.$light-color;
                         }
                     }
 
-                    // Planet Title
+                    // # Planet Title
                     &--title{
                         text-transform: uppercase;
                         font-size:120px;
@@ -87,18 +87,18 @@
                         padding:3rem 0 2rem 0;
                     }
 
-                    // Navbar & Suheading Containers (travel time/km)
+                    // # Navbar & Suheading Containers (travel time/km)
                     .destination-flex-allText--tabs, .destination-flex-allText--subheadings{
                         display:flex;
                     }
                     
-                    // Text Content (paragraph) below navbar & title
+                    // # Text Content (paragraph) below navbar & title
                     .destination-flex-allText--text{
-                        font-size:18px;
                         padding-bottom:4rem;
                         width:80%;
                     }
 
+                    // # Line between paragraph & subheadings
                     &--line{
                         position:relative;
                         background-color:vars.$light-color;
@@ -109,15 +109,15 @@
                     }
                     
                     
-                    // Subheadings
+                    // # Subheadings
                     .destination-flex-allText--subheadings{
     
-                        // Column
+                        // # Column
                         .column{
                             margin:25px 0;
                             width:50%;
                             
-                            //SubHeading titles
+                            // # SubHeading titles
                             .subheading2{
                                 color:vars.$text-color;
                             }
@@ -129,24 +129,88 @@
     }
 }
 
-// ## Media queries for responsivness ##
-@media screen and (min-width: 1024px) {
-    
-}
+
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    // # The whole page -- background
     .destinations{
-        background:url('/assets/destination/background-destination-tablet.jpg') no-repeat center center fixed; 
+        background:url('/assets/destination/background-destination-tablet.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        // # Page Content
+        .destinations-content{
+
+            // # Flex Container
+            .destination-flex{
+                width:100%;
+                text-align:center;
+                margin: auto auto;
+
+                // # Flex Content -- Image + Navbar & Text
+                &-content{
+                    display:flex;
+                    flex-direction: column-reverse;
+            
+                    // # Image Container on the Left
+                    .destination-flex-image{
+                        padding:3rem 0;
+
+                        img{
+                            width:70%;
+                        }
+                    }
+        
+                    // # Text Container on the Right
+                    .destination-flex-allText{
+                        width:80%;
+                        margin:auto;
+
+                        // # Navigation between Destinations
+                        &--tabs{
+                            justify-content:center;
+                            width:100%;
+                            gap:4%;
+
+                        }
+
+                        // # Planet Title
+                        &--title{
+                            text-transform: uppercase;
+                            font-size:100px;
+                            font-family:vars.$general-font;
+                            padding:2rem 0 1rem 0;
+                        }
+
+                        
+                        // # Text Content (paragraph) below navbar & title
+                        .destination-flex-allText--text{
+                            padding-bottom:2.5rem;
+                            width:100%;
+                        }
+
+                                            // # Subheadings
+                        .destination-flex-allText--subheadings{
+    
+                        // # Column
+                        .column{
+                            margin:10px 0;
+                        }
+                    }
+                    }
+                }
+            }
+        }
     }
 }
+
+
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
     .destinations{
-        background:url('/assets/destination/background-destination-mobile.jpg') no-repeat center center fixed; 
+        background:url('/assets/destination/background-destination-mobile.jpg') no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

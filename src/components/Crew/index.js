@@ -8,7 +8,8 @@ import "./style.scss";
 
 //TODO:Set Order for crew members using CSS
 
-const Crew = ({crewData, isTablet, isMobile}) => {
+const Crew = ({crewData}) => {
+
     // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS
     const [crewRole, setCrewRole] = useState("Commander");
     const [isCommActive, setCommActive] = useState(true);
@@ -25,15 +26,15 @@ const Crew = ({crewData, isTablet, isMobile}) => {
                 setMissSpeActive(false);
                 setPilotActive(false);
                 setFlightActive(false);
-              break;
-            case "Mission Specialist":
-                setCommActive(false);
-                setMissSpeActive(true);
-                setPilotActive(false);
-                setFlightActive(false);
                 break;
-            case "Pilot":
-                setCommActive(false);
+                case "Mission Specialist":
+                    setCommActive(false);
+                    setMissSpeActive(true);
+                    setPilotActive(false);
+                    setFlightActive(false);
+                    break;
+                    case "Pilot":
+                        setCommActive(false);
                 setMissSpeActive(false);
                 setPilotActive(true);
                 setFlightActive(false);
@@ -49,91 +50,95 @@ const Crew = ({crewData, isTablet, isMobile}) => {
           }
     };
 
-    
     // == FUNCTION TO CHANGE UP EVERY TEXT CONTENT AT CLICK
     const welcomeAboard = crewData.find(guy => {
         return guy.role === crewRole
     });
 
-    // == FUNCTION TO REQUIRE IMAGES FROM JSON & SLUGIFY NAMES TO MATCH WITH IMAGE'S NAME
-    const img = (imgName) => {
-        var slugify = require('slugify');
-        
-        if(isMobile){
-            return require (`../../assets/crew/image-${slugify(imgName)}.png`);
-        }else{
-            return require (`../../assets/crew/image-${slugify(imgName)}.webp`);
-        }
-    };
-
+    // == SLUGIFY FOR IMG NAME
+    const slugify = require('slugify');
 
     // EVERY CONSOLE.LOG TO KNOW IF EVERYTHING'S OKAY
     // console.log(data); //<-- OK
     // console.log(img(welcomeAboard.name)); // <-- OK
     // console.log(welcomeAboard.images); // <-- OK
     // console.log(isCommActive, isMissSpeActive, isPilotActive, isFlightActive); // <-- OK
-    
+
     return (
         <div className="crew">
             <div className="crew-content">
                 <div className="title"><span className="title-darkNumber">02</span> Meet your crew</div>
+                <div className="crew-content--flex">
                         <div className="crew-content--flex--image-container">
                             <div className="crew-content--flex--image-container--content-img">
-                                <img src={img(welcomeAboard.name.toLowerCase())} alt={`${welcomeAboard.name}`} title={`${welcomeAboard.name}`}/>
+                                <picture>
+                                    <source srcSet={require (`../../assets/crew/image-${slugify(welcomeAboard.name).toLowerCase()}.webp`)} />
+                                    <img src={require (`../../assets/crew/image-${slugify(welcomeAboard.name).toLowerCase()}.png`)}
+                                        alt={`${welcomeAboard.name}`}
+                                        title={`${welcomeAboard.name}`}
+                                    />
+                                </picture>
                             </div>
                         </div>
 
-                <div className="crew-content--container">
-                    <div className="crew-content--container--content">
-                        <div className="crew-content--container--content-flex-container-left">
-                            <div className="crew-content--container--content-flex-container-left--content-allText">
-                                <div className="crew-content--container--content-flex-container-left--content-allText--crew-job">{crewRole}</div>
+                <div className="crew-content--flex--textContainer">
+                    <div className="crew-content--flex--textContainer--content">
+                        <div className="crew-content--flex--textContainer--content-flex-container">
+                            <div className="crew-content--flex--textContainer--content-flex-container--content-allText">
+                                <div className="crew-content--flex--textContainer--content-flex-container--content-allText--crew-job">{crewRole}</div>
                                 <h2>{welcomeAboard.name}</h2>
 
-                                <div className="text crew-content--container--content-flex-container-left--content-allText--text">
+                                <div className="text crew-content--flex--textContainer--content-flex-container--content-allText--bio">
                                     {welcomeAboard.bio}
-                                    {/* STATIC CODE -- 
-                                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
-                                        and former NASA astronaut. He launched into space for the third time as 
-                                        commander of Crew Dragon Demo-2. 
+                                    {/* STATIC CODE --
+                                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+                                        and former NASA astronaut. He launched into space for the third time as
+                                        commander of Crew Dragon Demo-2.
                                     */}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="crew-content--container--carousel">
-                    <div className="crew-content--container--carousel--content">
+                <div className="crew-content--flex--carousel-container">
+                    <div className="crew-content--flex--carousel-container--carousel">
                         {crewData.map(crewMember => {
                             const isActive = (job) => {
                                 if(job==="Commander" && isCommActive){
-                                    return `comm--active`;
+                                    return "carousel-dot comm--active";
                                         }else if(job==="Mission Specialist" && isMissSpeActive){
-                                            return `missSpe--active`;
+                                            return "carousel-dot missSpe--active";
                                         }else if(job==="Pilot" && isPilotActive){
-                                            return `pilot--active`;
+                                            return "carousel-dot pilot--active";
                                         }else if(job==="Flight Engineer" && isFlightActive){
-                                            return `flight--active`;
+                                            return "carousel-dot flight--active";
+                                        }else{
+                                            return "carousel-dot";
                                         }
                                     }
-                                        return <div className={`carousel-dot ${isActive(crewMember.role)}`} key={crewMember.name} onClick={(event) => {handleChange(event, crewMember.role)}} />
+                                        return <div className={isActive(crewMember.role)} key={crewMember.name} onClick={(event) => {handleChange(event, crewMember.role)}} />
                                         })
                                     }
                         {/* STATIC CODE --
-                            <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" /> 
+                            <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" />
                         */}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )
 }
 
-//  Crew.propTypes = {
-    //   data:PropTypes.object,
-    //   isMobile: PropTypes.element,
-    //   isTablet: PropTypes.element,
-    //   ...
-// };
+Crew.propTypes = {
+    crewData:PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            images: PropTypes.object.isRequired,
+            role: PropTypes.string.isRequired,
+            bio: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
 
 export default Crew;

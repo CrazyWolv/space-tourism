@@ -6,9 +6,7 @@ import PropTypes from "prop-types";
 import "./style.scss";
 // import image from "../../assets/destination/image-moon.png"; // <-- STATIC IMPORT
 
-//TODO:Set Order for destinations using a css
-
-const Destination = ({destinationData, isTablet, isMobile}) => {
+const Destination = ({destinationData}) => {
     // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS
     const [destination, setDestination] = useState("Moon");
     const [isMoonActive, setMoonActive] = useState(true);
@@ -55,15 +53,6 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
         return planet.name === destination
     });
 
-    // == FUNCTION TO REQUIRE IMAGES FROM JSON
-    const img = (imgName) => {
-        if(isMobile){
-            return require (`../../assets/destination/image-${imgName.toLowerCase()}.webp`);
-        }else{
-            return require (`../../assets/destination/image-${imgName.toLowerCase()}.png`);
-        }
-    };
-
 
     // EVERY CONSOLE.LOG TO KNOW IF EVERYTHING'S OKAY
     // console.log(data); //<-- OK
@@ -81,17 +70,19 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
                             <div className="destination-flex-allText--tabs">
                                 {destinationData.map(destination => {
                                     const isActive = (name) => {
-                                        if(name==="moon" && isMoonActive){
-                                            return `moon--active`;
-                                        }else if(name==="mars" && isMarsActive){
-                                            return `mars--active`;
-                                        }else if(name==="europa" && isEuropaActive){
-                                            return `europa--active`;
-                                        }else if(name==="titan" && isTitanActive){
-                                            return `titan--active`;
+                                        if(name==="Moon" && isMoonActive){
+                                            return "tabtext moon--active";
+                                        }else if(name==="Mars" && isMarsActive){
+                                            return "tabtext mars--active";
+                                        }else if(name==="Europa" && isEuropaActive){
+                                            return "tabtext europa--active";
+                                        }else if(name==="Titan" && isTitanActive){
+                                            return "tabtext titan--active";
+                                        }else{
+                                            return "tabtext"
                                         }
                                     }
-                                        return <div className={`tabtext ${isActive(destination.name.toLowerCase())}`} key={destination.name} onClick={(event) => {handleChange(event, destination.name)}}>{destination.name}</div>
+                                        return <div className={isActive(destination.name)} key={destination.name} onClick={(event) => {handleChange(event, destination.name)}}>{destination.name}</div>
                                         })
                                 }
                                 {/* STATIC CODE -- 
@@ -104,7 +95,7 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
 
                             <div className="destination-flex-allText--title">{ weRgoingThere.name }</div>
 
-                            <div className="text destination-flex-allText--text">
+                            <div className="text text destination-flex-allText--text">
                                 { weRgoingThere.description }
                                 {/* STATIC CODE -- 
                                     See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
@@ -134,7 +125,13 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
                         </div>
 
                         <div className="destination-flex-image">
-                                <img src={img(destination.toLowerCase())} alt={`${weRgoingThere.name} destination`} title={`${weRgoingThere.name} destination`} />
+                                <picture>
+                                    <source srcSet={require (`../../assets/destination/image-${destination.toLowerCase()}.webp`)} />
+                                    <img src={require (`../../assets/destination/image-${destination.toLowerCase()}.png`)}
+                                        alt={`${weRgoingThere.name} destination`} 
+                                        title={`${weRgoingThere.name} destination`} 
+                                    />
+                                </picture>
                         </div>
                     </div>
                 </div>
@@ -143,11 +140,16 @@ const Destination = ({destinationData, isTablet, isMobile}) => {
     )
 }
 
-//  Destination.propTypes = {
-    //   data:PropTypes.object,
-    //   isMobile: PropTypes.element,
-    //   isTablet: PropTypes.element,
-    //   ...
-// };
+Destination.propTypes = {
+    destinationData:PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            images: PropTypes.object.isRequired,
+            description: PropTypes.string.isRequired,
+            distance: PropTypes.string.isRequired,
+            travel: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+}
 
 export default Destination;

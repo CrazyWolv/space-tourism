@@ -12,6 +12,7 @@ header, .navigation--container-content, .navigation--container-content-logo-nd-l
 header{
     position:relative;
     width:100%;
+    z-index:5;
 }
 
 // # Navigation container to place navigation / header
@@ -31,7 +32,7 @@ header{
 
         // Navigation Logo & Line container
         &-logo-nd-line{
-            width:70%;
+            width:60%;
             align-items:center;
             gap:5%;
             
@@ -62,6 +63,7 @@ header{
         .navigation--links-container{
             position:relative;
             width:100%;
+            height:13vh;
             background-color:rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(100px);
 
@@ -73,23 +75,33 @@ header{
                 
                 // Every Links
                 .nav-link{
-                    padding:3rem 0;
-                    font-size:23px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 23px;
                     letter-spacing: 3px;
+
+                    &-label{
+                        margin:auto;
+                    }
                 
                     // Active Link class
-                    & .active{
-                        border-bottom:3px solid vars.$light-color;
+                    .active-bar{
+                        width:100%;height:3px;
+                        background-color: vars.$light-color;
                     }
-                
-                    // Non-Active link
-                    &.unselected{
-                        border:none;
+                    
+                    .unactive{
+                        display:none;
                     }
-                    }
-    
+                }
+
                 .nav-link:hover{
                     border-bottom:3px solid vars.$hover-border;
+                }
+
+                .active:hover{
+                    border:none;
                 }
                     
                     // Number before link name
@@ -130,6 +142,7 @@ header{
         }
             // ## Navigation Links
             .navigation--links-container{
+                height:13vh;
 
                 .navigation--links{
                     width:100%;
@@ -138,7 +151,6 @@ header{
                     
                     // Every Links
                     .nav-link{
-                        padding:2.7rem 0;
                         font-size:17px;
                         letter-spacing: 3px;
                     
@@ -164,17 +176,18 @@ header{
     padding-top:0%;
     
     // # Navigation Container's whole content
-    &-content-mobile{
-        display:flex;
+    &-content{
+        justify-content: unset;
+        align-items: unset;
 
         // Navigation Logo & Line container
         &-logo-nd-line{
-            position:relative;
-            width:30%;
+            position:absolute;
             
             // ## Navigation Logo to the left
             .navigation--logo{
                 display:block;
+                position:relative;
                 width:48px;
                 height:48px;
                 margin-left:1.5em;
@@ -198,7 +211,7 @@ header{
             
             &--close-icon{
                 position:relative;
-                margin-right:1.5em;
+                margin-right:1.2em;
                 margin-top:1.75rem;
                 color:vars.$text-color;
             }
@@ -206,31 +219,50 @@ header{
         
         // ## Navigation Links
         .navigation--links-container{
-            height:100vh;
-            padding-top:10vh;
-            justify-content: flex-end;
-            width: 100%;
+            width: 70%;
+            margin: auto 0 auto auto;
+            height: 100vh;
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(100px);
             
-            
             .navigation--links{
-                width:90%;
+                width:100%;
+                margin-top: 15vh;
+                padding:0;
                 flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap:3%;
                 
                 // Every Links
                 .nav-link{
-                    padding:1.5rem 0;
-                    font-size:23px;
-                    letter-spacing: 3px;
-                
-                    // Active Link class
-                    & .active{
-                        border-right:3px solid vars.$light-color;
+                    width:100%;
+                    height:auto;
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding:0.5rem 0 0.5rem 2rem;
+                    gap:2%;
+
+                    &-label{
+                        margin:0;
                     }
 
+                    .active-bar{
+                        height:100%;width:8px;
+                        background-color: vars.$light-color;
                     }
-    
+
+                    .unactive{
+                        display:none;
+                    }
+                }
+
+                // Active Link class
+                .active{
+                    border:none;
+                }
+
                 .nav-link:hover{
                     border-bottom:none;
                 }

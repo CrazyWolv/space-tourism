@@ -122,7 +122,6 @@ letter-spacing: 4.75px;
   // # Every page from the app -- padding & spacing from header, page's height
   .homepage, .crew, .technology, .destinations{
     padding-top:vars.$space-from-header-tablet;
-    height:vars.$page-height-tablet;
   }
 }
 
@@ -132,6 +131,5 @@ letter-spacing: 4.75px;
   // # Every page from the app -- padding & spacing from header, page's height
   .homepage, .crew, .technology, .destinations{
     padding-top:vars.$space-from-header-mobile;
-    height:vars.$page-height-mobile;
   }
 }

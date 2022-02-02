@@ -78,7 +78,7 @@ header{
                     letter-spacing: 3px;
                 
                     // Active Link class
-                    &.active{
+                    & .active{
                         border-bottom:3px solid vars.$light-color;
                     }
                 

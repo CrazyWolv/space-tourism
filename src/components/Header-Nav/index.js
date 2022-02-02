@@ -20,28 +20,24 @@ const HeaderNav = ({isTablet, isMobile}) => {
                     <nav className="navigation--links">
                                 <NavLink
                                     to="/"
-                                    className="nav-link"
-                                    activeClassName="-active"
+                                    className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
                                 ><span className="strongNumber">00</span> Home
                                 </NavLink>
                                 <NavLink
                                     to="/destinations"
-                                    className="nav-link"
-                                    activeClassName="-active"
+                                    className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
                                 >
                                     <span className="strongNumber">01</span> Destination
                                 </NavLink>
                                 <NavLink
                                     to="/crew"
-                                    className="nav-link"
-                                    activeClassName="-active"
+                                    className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
                                 >
                                     <span className="strongNumber">02</span> Crew
                                 </NavLink>
                                 <NavLink
                                     to="/technologies"
-                                    className="nav-link"
-                                    activeClassName="-active"
+                                    className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
                                 >
                                     <span className="strongNumber">03</span> Technology
                                 </NavLink>

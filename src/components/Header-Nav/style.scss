@@ -19,7 +19,7 @@ header{
     position:absolute;
     width:100%;
     height:100px;
-    padding-top:4%;
+    padding-top:2%;
 
     
     // # Navigation Container's whole content
@@ -99,7 +99,6 @@ header{
                     }
             }
         }
-
     }
 }
 
@@ -129,29 +128,29 @@ header{
                 display:none;
             }
         }
-        
-        // ## Navigation Links
-        .navigation--links-container{
+            // ## Navigation Links
+            .navigation--links-container{
 
-            .navigation--links{
-                width:100%;
-                justify-content: space-evenly;
-                align-items:center;
-                
-                // Every Links
-                .nav-link{
-                    padding:2.7rem 0;
-                    font-size:17px;
-                    letter-spacing: 3px;
-                
-                    }
+                .navigation--links{
+                    width:100%;
+                    justify-content: space-evenly;
+                    align-items:center;
                     
-                    // Number before link name
-                    .strongNumber{
-                        display:none;
-                    }
+                    // Every Links
+                    .nav-link{
+                        padding:2.7rem 0;
+                        font-size:17px;
+                        letter-spacing: 3px;
+                    
+                        }
+                        
+                        // Number before link name
+                        .strongNumber{
+                            display:none;
+                        }
+                }
             }
-        }
+        
     }
 }
 }
@@ -159,80 +158,81 @@ header{
 @media screen and (max-width: 767px) {
 // # Navigation container to place navigation / header
 .navigation--container{
-    position:absolute;
+    position:fixed;
     width:100%;
-    height:100px;
-    padding-top:4%;
-
+    height:0px;
+    padding-top:0%;
     
     // # Navigation Container's whole content
-    &-content{
-        position:relative;
-        width:100%;
-        justify-content: space-around;
-        align-items:center;
+    &-content-mobile{
+        display:flex;
 
         // Navigation Logo & Line container
         &-logo-nd-line{
-            width:70%;
-            align-items:center;
-            gap:5%;
+            position:relative;
+            width:30%;
             
             // ## Navigation Logo to the left
             .navigation--logo{
                 display:block;
                 width:48px;
                 height:48px;
-                margin-left:5em;
+                margin-left:1.5em;
+                margin-top:1.5rem;
             }
 
 
             // ## Navigation line between logo & navigation
             .navigation--line{
-                position:relative;
-                left:2em;
-                background-color:vars.$light-color;
-                width:100%;
-                height:1px;
-                opacity:0.5;
-                z-index:99;
+                display:none;
             }
         }
         
 
+        // # Icon to close burger menu
+        .close-icon-container{
+            position:absolute;
+            right:0;
+            z-index:99;
+            
+            
+            &--close-icon{
+                position:relative;
+                margin-right:1.5em;
+                margin-top:1.75rem;
+                color:vars.$text-color;
+            }
+        }
         
         // ## Navigation Links
         .navigation--links-container{
-            position:relative;
-            width:100%;
-            background-color:rgba(255,255,255,0.1);
-            backdrop-filter: blur(7px);
-
-
+            height:100vh;
+            padding-top:10vh;
+            justify-content: flex-end;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(100px);
+            
+            
             .navigation--links{
                 width:90%;
-                justify-content: space-evenly;
-                align-items:center;
+                flex-direction: column;
                 
                 // Every Links
                 .nav-link{
-                    padding:3rem 0;
+                    padding:1.5rem 0;
                     font-size:23px;
                     letter-spacing: 3px;
                 
                     // Active Link class
-                    &.active{
-                        border-bottom:2px solid vars.$light-color;
+                    & .active{
+                        border-right:3px solid vars.$light-color;
                     }
-                
-                    // Non-Active link
-                    &.unselected{
-                        border:none;
-                    }
+
                     }
     
                 .nav-link:hover{
-                    border-bottom:2px solid vars.$hover-border;
+                    border-bottom:none;
                 }
                     
                     // Number before link name
@@ -242,7 +242,6 @@ header{
                     }
             }
         }
-
     }
 }
-    }
+}

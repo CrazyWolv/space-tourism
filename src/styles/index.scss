@@ -1,7 +1,6 @@
 @use 'reset';
 @use 'vars';
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Open+Sans:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@300;400&family=Bellefair&display=swap');
 
 // # general styling -- body
 html, body { overflow-x: hidden; }
@@ -14,7 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color:#fff;
-  height:vars.$page-height;
 }
 
 // # ALL TITLES & SUBTITLES
@@ -80,19 +78,26 @@ letter-spacing: 4.75px;
 // # General text (paragraph, tabs)
 .text{
   line-height:40px;
+  font-family: vars.$text-font;
+  font-weight: lighter;
   color:vars.$text-color;
-  font-size:18px;
+  font-size:23px;
 }
 
 
 // # Every page from the app -- padding & spacing from header, page's height
 .homepage, .crew, .technology, .destinations{
+  height:vars.$page-height;
   padding-top:vars.$space-from-header;
 }
 
 
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  body{
+    height:vars.$page-height;
+  }
+
   // # ALL TITLES & SUBTITLES
   // # MAIN TITLE
     h1, .heading1{

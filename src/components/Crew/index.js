@@ -70,15 +70,13 @@ const Crew = ({crewData}) => {
                 <div className="title"><span className="title-darkNumber">02</span> Meet your crew</div>
                 <div className="crew-content--flex">
                         <div className="crew-content--flex--image-container">
-                            <div className="crew-content--flex--image-container--content-img">
-                                <picture>
+                                <picture className="crew-content--flex--image-container--content-img">
                                     <source srcSet={require (`../../assets/crew/image-${slugify(welcomeAboard.name).toLowerCase()}.webp`)} />
                                     <img src={require (`../../assets/crew/image-${slugify(welcomeAboard.name).toLowerCase()}.png`)}
                                         alt={`${welcomeAboard.name}`}
                                         title={`${welcomeAboard.name}`}
                                     />
                                 </picture>
-                            </div>
                         </div>
 
                 <div className="crew-content--flex--textContainer">

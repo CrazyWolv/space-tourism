@@ -107,7 +107,6 @@
             width:100%;
             padding-top:0vh;
             text-align:center;
-            overflow: scroll;
         }
         
         // # Flex container
@@ -116,7 +115,7 @@
             
             // # Left Container -- text
             &-left{
-                margin-top:5%;
+                margin-top:1%;
                 width:100%;
                 align-items: center;
                 height:50vh;
@@ -130,6 +129,8 @@
             // # Right container -- button
             &-right{
                 width:100%;
+                padding-top:5%;
+                margin: auto auto;
     
                 // # Button itself
                 &--explore-button{

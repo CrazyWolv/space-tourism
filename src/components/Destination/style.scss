@@ -156,7 +156,7 @@
             
                     // # Image Container on the Left
                     .destination-flex-image{
-                        padding:3rem 0;
+                        padding:5rem 0 4rem 0;
 
                         img{
                             width:70%;
@@ -172,7 +172,7 @@
                         &--tabs{
                             justify-content:center;
                             width:100%;
-                            gap:4%;
+                            gap:5%;
 
                         }
 
@@ -181,13 +181,13 @@
                             text-transform: uppercase;
                             font-size:100px;
                             font-family:vars.$general-font;
-                            padding:2rem 0 1rem 0;
+                            padding:3rem 0 1.5rem 0;
                         }
 
                         
                         // # Text Content (paragraph) below navbar & title
                         .destination-flex-allText--text{
-                            padding-bottom:2.5rem;
+                            padding-bottom:3rem;
                             width:100%;
                         }
 
@@ -196,7 +196,7 @@
     
                         // # Column
                         .column{
-                            margin:10px 0;
+                            margin:1rem 0;
                         }
                     }
                     }

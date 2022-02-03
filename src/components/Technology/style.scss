@@ -7,10 +7,9 @@
 // ## Styling Component ##
 .technology{
     background:url('/assets/technology/background-technology-desktop.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    -webkit-background-size: cover;
+    overflow-y:auto;
 
     // Page Container/Content
     .technology-content{
@@ -121,11 +120,9 @@
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .technology{
-        background:url('/assets/technology/background-technology-tablet.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/technology/background-technology-tablet.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
 
         .technology-content{
             width:90%;
@@ -200,50 +197,85 @@
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
     .technology{
-        background:url('/assets/technology/background-technology-mobile.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/technology/background-technology-mobile.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
+        overflow-x:hidden;
     
         .technology-content{
             width:90%;
-            color:vars.$text-color;
-            margin: auto auto;
-            text-align:center;
     
             &--image-container{
-                display:flex;
-                justify-content: right;
-                width:50%;
+                width: 100%;
+                align-items: center;
+                position: relative;
+                height: 25vh;
+                margin: 4.5vh 0;
                 
                 &--image{
-                    position:relative;
-                    right:0;
-    
+                    position: absolute;
+                    width: 110%;
+
+                    img{
+                        width: inherit;
+                    }
                 }
             }
 
             // Flex Container
             .technology-flex{
-                width:80%;
-                height:60vh;
-                display:flex;
-                flex-direction: column-reverse;
-                justify-content:space-between;
+                width: 90%;
+                height: auto;
+                margin: auto auto;
+                flex-direction: column;
+                justify-content: unset;
                 
                 // Flex Content
                 &-allText-nd-buttons{
-                    display:flex;
-                    justify-content:flex-start;
-                    align-content: center;
-                    align-items:center;
-                    margin-left:7.5rem;
-                    gap:10%; 
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: unset;
+                    align-content: unset;
+                    margin: auto;
+                    text-align: center;
     
-                    &--buttons-container{
-                        display:flex;
-                        flex-direction:row;
+                    &--buttons-container{                
+                        width: 80%;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        &--button{
+                            font-size:1.3rem;
+                            width:55px;
+                            height:55px;
+                            margin:0 auto;
+                        }
+                    }
+                
+
+                    &--allText-container{
+                        padding: 4.5vh 0 7vh 0;
+                        margin: auto;
+                        width: inherit;
+    
+                        &--headingText{
+                            font-size:18px;
+                            letter-spacing:2.5px;
+                        }
+
+                        &--titleText{
+                            font-size: 30px;
+                            margin: 10px 0 25px 0;
+                        }
+    
+                        &--description{
+                            width: 100%;
+                            font-weight: 400;
+                            line-height: 25px;
+                            font-size: 17px;
+                            letter-spacing: 0px;
+                            margin: auto auto;
+                        }
                     }
                 }
             }

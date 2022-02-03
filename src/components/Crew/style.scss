@@ -8,10 +8,9 @@
 // Whole Page -- background
 .crew{
     background:url('/assets/crew/background-crew-desktop.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    -webkit-background-size: cover;
+    overflow-y:auto;
 
     // Page Container/Content
     .crew-content{
@@ -151,11 +150,9 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     // Whole Page -- background
     .crew{
-        background:url('/assets/crew/background-crew-tablet.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/crew/background-crew-tablet.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
 
          // Page Container/Content
         .crew-content{
@@ -255,10 +252,8 @@
 @media screen and (max-width: 767px) {
     // Whole Page -- background
     .crew{
-        background:url('/assets/crew/background-crew-mobile.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/crew/background-crew-mobile.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
     }
     }

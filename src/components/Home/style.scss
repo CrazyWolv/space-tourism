@@ -13,10 +13,9 @@
 // # The whole page -- background
 .homepage{
     background:url('/assets/home/background-home-desktop.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    -webkit-background-size: cover;
+    overflow-y:auto;
 
     // # Page content
     .homepage-content{
@@ -96,11 +95,9 @@
 
     // # The whole page -- background
     .homepage{
-        background:url('/assets/home/background-home-tablet.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/home/background-home-tablet.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
 
         // # Page content
         .homepage-content{
@@ -146,14 +143,11 @@
 
 // # Media query -- MOBILE
 @media screen and (max-width: 767px) {
-
     // # The whole page -- background
     .homepage{
-        background:url('/assets/home/background-home-mobile.jpg') no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background:url('/assets/home/background-home-mobile.jpg') no-repeat center center fixed; 
         background-size: cover;
+        -webkit-background-size: cover;
     
             // # Page content
             .homepage-content{
@@ -175,10 +169,10 @@
                     
                     // # Left container's paragraph text
                     &--paragraph{
-                        width: 95%;
+                        width: 90%;
                         font-weight: 400;
                         line-height: 25px;
-                        font-size: 14px;
+                        font-size: 17px;
                         letter-spacing:0px;
                     }
                 }

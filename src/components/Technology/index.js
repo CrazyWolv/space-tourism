@@ -8,8 +8,6 @@ import "./style.scss";
 // import image from "../../assets/technology/image-launch-vehicle-portrait.jpg"; // <-- STATIC IMPORT
 
 
-//TODO:Set Order for technologies using CSS
-
 const Technology = ({techData, isTablet, isMobile}) => {
     // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS
     const [technology, setTechnology] = useState("Launch vehicle");

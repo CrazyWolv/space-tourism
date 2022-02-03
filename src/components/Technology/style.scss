@@ -59,6 +59,7 @@
                         margin:2vh 0;
                         font-size:2rem;
                         font-family:vars.$general-font;
+                        color:vars.$light-color;
                         cursor:pointer;
                         width:100px;
                         height:100px;
@@ -117,10 +118,6 @@
 }       
         
 
-// ## Media queries for responsivness ##
-@media screen and (min-width: 1024px) {
-    
-}
 // # Media query -- TABLET
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .technology{
@@ -131,42 +128,67 @@
         background-size: cover;
 
         .technology-content{
-            width:90%;
-            color:vars.$text-color;
-            margin: auto auto;
+            width:100%;
     
             &--image-container{
-                display:flex;
-                justify-content: right;
-                width:50%;
+                width: 101%;
+                margin: 4.5vh 0;
                 
                 &--image{
-                    position:absolute;
-                    right:0;
-    
+                    position: relative;
+                    width: inherit;
+
+                    img{
+                        width: inherit;
+                        background-size: cover;
+                        -webkit-background-size: cover;
+                    }
                 }
             }
 
             // Flex Container
             .technology-flex{
-                width:80%;
-                height:60vh;
-                display:flex;
-                flex-direction: row-reverse;
-                justify-content:space-between;
+                width: 90%;
+                height: auto;
+                margin: auto auto;
+                flex-direction: column;
+                justify-content: unset;
                 
                 // Flex Content
                 &-allText-nd-buttons{
-                    display:flex;
-                    justify-content:flex-start;
-                    align-content: center;
-                    align-items:center;
-                    margin-left:7.5rem;
-                    gap:10%; 
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: unset;
+                    align-content: unset;
+                    margin: auto;
+                    text-align: center;
     
-                    &--buttons-container{
-                        display:flex;
-                        flex-direction:column;
+                    &--buttons-container{                
+                        width: 40%;
+                        flex-direction: row;
+
+                        &--button{
+                            font-size:1.5rem;
+                            width:70px;height:70px;
+                            margin:0 auto;
+                        }
+                    }
+                
+
+                    &--allText-container{
+                        margin: 4.5vh auto auto auto;
+                        width:inherit;
+    
+                        &--titleText{
+                            font-size:3rem;
+                            margin:25px 0;
+                        }
+    
+                        &--description{
+                            width: 75%;
+                            line-height: 35px;
+                            margin: auto auto;
+                        }
                     }
                 }
             }

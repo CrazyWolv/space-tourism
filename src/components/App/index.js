@@ -20,8 +20,8 @@ import data from "../../data/data.json";
 
 const App = () => {
   // FUNCTIONS TO GET SCREEN SIZE TO MANAGE RESPONSIVNESS ON TABLET & MOBILE
-  const isTablet = useMediaQuery({ query: "(minWidth: 768, max-width: 1224px)" });
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1224 });
+  const isMobile = useMediaQuery({ maxWidth:767 });
     
 
   // console.log(data); //<-- OK

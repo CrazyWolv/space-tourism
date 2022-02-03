@@ -192,6 +192,7 @@
                 // Flex Content
                 &--content{
                     width:100%;
+                    height:auto;
             
 
                     // Left Container (text + Carousel)
@@ -229,12 +230,13 @@
             // Dots Container
             &--carousel-container{
                 position:relative;
-                margin-left:0;
+                // height:10vh;
+                margin:auto;
+                align-content:center;
                 
                 &--carousel{
                     display:flex;
-                    align-content: flex-end;
-                    align-items:flex-end;
+                    justify-content:center;
 
                         // Dots
                         .carousel-dot{

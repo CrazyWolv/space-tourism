@@ -155,5 +155,47 @@
         -o-background-size: cover;
         background-size: cover;
     
+            // # Page content
+            .homepage-content{
+                width:100%;
+                padding-top:0vh;
+                text-align:center;
+            }
+            
+            // # Flex container
+            .homepage-flex{
+                flex-direction: column;
+                
+                // # Left Container -- text
+                &-left{
+                    margin-top:1%;
+                    width:100%;
+                    align-items: center;
+                    height:50vh;
+                    
+                    // # Left container's paragraph text
+                    &--paragraph{
+                        width: 95%;
+                        font-weight: 400;
+                        line-height: 25px;
+                        font-size: 14px;
+                        letter-spacing:0px;
+                    }
+                }
+                
+                // # Right container -- button
+                &-right{
+                    width:100%;
+                    padding-top: 4vh;
+                    margin: auto auto;
+
+                    // # Button itself
+                    &--explore-button{
+                        width: 150px;
+                        height: 150px;
+                        font-size: 1.5rem;
+                    }
+                }   
+            }
     }
 }

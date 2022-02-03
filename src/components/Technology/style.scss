@@ -128,20 +128,21 @@
         background-size: cover;
 
         .technology-content{
-            width:100%;
+            width:90%;
     
             &--image-container{
-                width: 101%;
-                margin: 4.5vh 0;
+                width: 100%;
+                align-items: center;
+                position: relative;
+                height: 30vh;
+                margin: 5.5vh 0;
                 
                 &--image{
-                    position: relative;
-                    width: inherit;
+                    position: absolute;
+                    width: 110%;
 
                     img{
                         width: inherit;
-                        background-size: cover;
-                        -webkit-background-size: cover;
                     }
                 }
             }
@@ -185,7 +186,7 @@
                         }
     
                         &--description{
-                            width: 75%;
+                            width: 82%;
                             line-height: 35px;
                             margin: auto auto;
                         }

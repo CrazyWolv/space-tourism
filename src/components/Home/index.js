@@ -1,5 +1,4 @@
 // ##########  Everything needing import 🙂  ##########
-import PropTypes from "prop-types";
 
 
 // # styles
@@ -20,8 +19,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="homepage-flex-right">
-                        <button className="homepage-flex-right--explore-button">
-                            <a href="/destinations">Explore</a>
+                        <button className="homepage-flex-right--explore-button" href="/destinations">
+                            Explore
                         </button>
                     </div>
                 </div>
@@ -29,9 +28,5 @@ const Home = () => {
         </div>
     )
 }
-
-//  Home.propTypes = {
-    //   ...
-// };
 
 export default Home;

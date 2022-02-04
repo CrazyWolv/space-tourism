@@ -8,8 +8,8 @@
 // Whole Page -- background
 .crew{
     background:url('/assets/crew/background-crew-desktop.jpg') no-repeat center center fixed; 
-    background-size: cover;
     -webkit-background-size: cover;
+    background-size: cover;
     overflow-y:auto;
 
     // Page Container/Content
@@ -106,26 +106,26 @@
                         margin:10px 0;
                         background-color:rgb(77, 77, 77);
                         cursor:pointer;
-                        border-radius:30px;
                         -webkit-border-radius:30px;
                         -moz-border-radius:30px;
                         -ms-border-radius:30px;
                         -o-border-radius:30px;
-                        transition: all 0.3s;
+                        border-radius:30px;
                         -webkit-transition: all 0.3s;
                         -moz-transition: all 0.3s;
                         -ms-transition: all 0.3s;
                         -o-transition: all 0.3s;
+                        transition: all 0.3s;
                     }
     
                     // Dots Hover
                     .carousel-dot:hover{
                         background-color:grey;
-                        transition: all 0.3s;
                         -webkit-transition: all 0.3s;
                         -moz-transition: all 0.3s;
                         -ms-transition: all 0.3s;
                         -o-transition: all 0.3s;
+                        transition: all 0.3s;
                     }
                     
                     // Dots active
@@ -151,8 +151,8 @@
     // Whole Page -- background
     .crew{
         background:url('/assets/crew/background-crew-tablet.jpg') no-repeat center center fixed; 
-        background-size: cover;
         -webkit-background-size: cover;
+        background-size: cover;
 
          // Page Container/Content
         .crew-content{
@@ -175,7 +175,7 @@
                 bottom:0;
 
                 img{
-                    width:70%;
+                    width:100%;
                 }
 
             }
@@ -213,7 +213,9 @@
 
                             // Crewmember's Bio
                             &--bio{
-                                width:90%;
+                                width: 100%;
+                                padding:0 5%;
+                                font-weight: 400;
                                 margin:auto auto;
                             }
                         }
@@ -226,8 +228,7 @@
             // Dots Container
             &--carousel-container{
                 position:relative;
-                // height:10vh;
-                margin:auto;
+                margin:5% auto 5% auto;
                 align-content:center;
                 
                 &--carousel{
@@ -252,8 +253,8 @@
     // Whole Page -- background
     .crew{
         background:url('/assets/crew/background-crew-mobile.jpg') no-repeat center center fixed; 
-        background-size: cover;
         -webkit-background-size: cover;
+        background-size: cover;
 
                  // Page Container/Content
                  .crew-content{
@@ -271,8 +272,8 @@
                         right:0;
                         margin: 6vh 0 3.5vh 0;
                         justify-content:center;
-                        border-bottom:1px solid vars.$text-color;
-        
+                        border-bottom:1px solid rgba(vars.$text-color, 0.5);   
+
                         img{
                             width:70%;
                         }

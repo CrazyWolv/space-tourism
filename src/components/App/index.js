@@ -2,7 +2,6 @@
 // # Packages
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import PropTypes from "prop-types";
 
 
 // # Components
@@ -45,13 +44,5 @@ const App = () => {
     </>
   );
 }
-
-// App.propTypes = {
-//   HeaderNav:PropTypes.elementType.isRequired,
-//   Home: PropTypes.elementType.isRequired,
-//   Destination: PropTypes.elementType.isRequired,
-//   Crew: PropTypes.elementType.isRequired,
-//   Technology: PropTypes.elementType.isRequired,
-// };
 
 export default App;

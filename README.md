@@ -12,7 +12,7 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
-    - [Continued development](#continued-development)
+    - [Continued development & what I learned](#continued-development--what-i-learned)
     - [Useful resources](#useful-resources)
   - [Future Updates](#future-updates)
   - [Author](#author)
@@ -54,11 +54,13 @@ Tbc
 - [PropTypes](https://www.npmjs.com/package/prop-types) - PropTypes package for props validation
 
 
-### Continued development
+### Continued development & what I learned
 
 I would like to learn how to efficiently refactoring my code in my Components. There's a repetition on hooks & some functions and I would like to avoid that from now on.
 
-I know now I need to code my applications with a mobile-first workflow, will be easier and quicker to adapt to desktop & tablets :wink:
+I know now I need to code my applications with a mobile-first workflow, this will avoid repetitions in CSS and will make responsivness easier and quicker to desktop & tablets :wink:
+
+I should have done my test while making my components rather than test after the whole app was done.
 
 
 ### Useful resources
@@ -69,10 +71,10 @@ I know now I need to code my applications with a mobile-first workflow, will be 
 
 ## Future Updates
 I would like to add some animations to make the website more smooth :
-- [] For transitions between pages
-- [] On the slide's images
-- [] On navigation bar when clicking on a link
-- [] On burger menu when clicking on the open/close icon
+- [ ] For transitions between pages
+- [ ] On the slide's images
+- [ ] On navigation bar when clicking on a link
+- [ ] On burger menu when clicking on the open/close icon
 
 
 ## Author

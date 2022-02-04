@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 // # styles & images
 import "./style.scss";
 
-const Navbar = ({open, isOpen}) => {
+const Navbar = ({closeMenu}) => {
   
   const handleChange = () => {
-    isOpen(!open);
+    closeMenu(false);
   }
 
     return(

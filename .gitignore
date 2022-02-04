@@ -24,6 +24,7 @@
 
 # testing
 /coverage
+/tests/demo.test.js
 
 # production
 /build

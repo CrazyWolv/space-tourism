@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import PropTypes from "prop-types";
 
 import Logo from "../../assets/shared/logo.svg";
 import Navbar from "./nav";
@@ -34,22 +33,18 @@ const HeaderNav = ({isMobile}) => {
                         <div className="close-icon-container">
                             <FontAwesomeIcon icon={faTimes} size="2x" className="close-icon-container--close-icon" onClick={(event) => {handleChange(event)}} />
                         </div>
-                        <Navbar open={open} isOpen={isOpen} />
+                        <Navbar closeMenu={isOpen} />
                     </>
                     :
                     <div className="close-icon-container"><FontAwesomeIcon icon={faBars} size="2x" className="close-icon-container--close-icon" onClick={(event) => {handleChange(event)}} /></div>
                 )}
             
                 {/* Desktop Navbar */}
-                {!isMobile && <Navbar />}
+                {!isMobile && <Navbar closeMenu={isOpen} />}
             </div>
         </div>
     </header>
     )
 }
-
-//  HeaderNav.propTypes = {
-//      isMobile: PropTypes.element,
-// };
 
 export default HeaderNav;

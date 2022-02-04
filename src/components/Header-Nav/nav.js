@@ -13,7 +13,7 @@ const Navbar = ({closeMenu}) => {
         <div className="navigation--links-container">
                             <nav className="navigation--links">
                                         <NavLink
-                                            to="/home"
+                                            to="/"
                                             className={({isActive}) => "nav-link" + (isActive ? " active" : "")}
                                             children={({ isActive }) => {
                                                 const activeBar = isActive ? "active-bar" : "unactive";

@@ -35,7 +35,7 @@ const App = () => {
         <HeaderNav isMobile={isMobile} isTablet={isTablet} />
             
             <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route exact path="/home" element={<Home />} />
                 <Route exact path="/destinations" element={<Destination destinationData={data.destinations} />} />
                 <Route exact path="/crew" element={<Crew crewData={data.crew} />} />
                 <Route exact path="/technologies" element={<Technology techData={data.technology} isTablet={isTablet} isMobile={isMobile} />} />

@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 // Render
 const rootReactElement = (
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter>
     <App />
   </HashRouter>
   );

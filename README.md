@@ -35,9 +35,8 @@ Users should be able to:
 
 ### Links
 
-Tbc
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -52,6 +51,7 @@ Tbc
 - [Slugify](https://www.npmjs.com/package/slugify) - Slugify package
 - [react-responsive](https://www.npmjs.com/package/react-responsive) - React-responsive package
 - [PropTypes](https://www.npmjs.com/package/prop-types) - PropTypes package for props validation
+- [Chai](https://www.chaijs.com/) - Chai package for testing components
 
 
 ### Continued development & what I learned
@@ -79,7 +79,7 @@ I would like to add some animations to make the website more smooth :
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+<!-- - Website - [Add your name here](https://www.your-site.com) - still coding this one -->
 - Frontend Mentor - [@CrazyWolv](https://www.frontendmentor.io/profile/CrazyWolv)
 
 

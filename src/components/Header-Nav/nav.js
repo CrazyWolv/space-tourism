@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom";
 // # styles & images
 import "./style.scss";
 
-const Navbar = () => {
+const Navbar = ({open, isOpen}) => {
+  
+  const handleChange = () => {
+    isOpen(!open);
+  }
+
     return(
         <div className="navigation--links-container">
                             <nav className="navigation--links">
@@ -18,6 +23,7 @@ const Navbar = () => {
                                                   </>
                                                 );
                                               }}
+                                              onClick={(event) => {handleChange(event)}}
                                         />
                                         <NavLink
                                             to="/destinations"
@@ -30,6 +36,7 @@ const Navbar = () => {
                                                   </>
                                                 );
                                               }}
+                                              onClick={(event) => {handleChange(event)}}
                                         />
                                         <NavLink
                                             to="/crew"
@@ -42,6 +49,7 @@ const Navbar = () => {
                                                     </>
                                                 );
                                               }}
+                                              onClick={(event) => {handleChange(event)}}
                                         />
                                         <NavLink
                                             to="/technologies"
@@ -54,6 +62,7 @@ const Navbar = () => {
                                                   </>
                                                 );
                                               }}
+                                              onClick={(event) => {handleChange(event)}}
                                         />
                             </nav>
                         </div>

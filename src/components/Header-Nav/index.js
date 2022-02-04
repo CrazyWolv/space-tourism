@@ -11,7 +11,7 @@ import Navbar from "./nav";
 import "./style.scss";
 
 const HeaderNav = ({isMobile}) => {
-    const [open, isOpen] = useState(true);
+    const [open, isOpen] = useState(false);
 
     const handleChange = () => {
         // console.log(open); // <== OK !
@@ -24,20 +24,20 @@ const HeaderNav = ({isMobile}) => {
       <div className="navigation--container">
         <div className="navigation--container-content">
                 <div className="navigation--container-content-logo-nd-line">
-                        <img src={Logo} className="navigation--logo" alt="Space Tourism Logo" title="Space Tourism Logo" height="45px" width="45px" />
+                        <a href="/"><img src={Logo} className="navigation--logo" alt="Space Tourism Logo" title="Space Tourism Logo" height="45px" width="45px" /></a>
                         <div className="navigation--line" />
                 </div>
 
                 {/* Burger Menu displayed if the screen is mobile-sized  */}
                 {isMobile && (open ?
-                        <div className="close-icon-container"><FontAwesomeIcon icon={faBars} size="2x" className="close-icon-container--close-icon" onClick={(event) => {handleChange(event)}} /></div>
-                    :
                     <>
                         <div className="close-icon-container">
                             <FontAwesomeIcon icon={faTimes} size="2x" className="close-icon-container--close-icon" onClick={(event) => {handleChange(event)}} />
                         </div>
-                        <Navbar />
+                        <Navbar open={open} isOpen={isOpen} />
                     </>
+                    :
+                    <div className="close-icon-container"><FontAwesomeIcon icon={faBars} size="2x" className="close-icon-container--close-icon" onClick={(event) => {handleChange(event)}} /></div>
                 )}
             
                 {/* Desktop Navbar */}

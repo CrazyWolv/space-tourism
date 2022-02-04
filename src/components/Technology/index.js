@@ -100,26 +100,14 @@ const Technology = ({techData, isTablet, isMobile}) => {
                                              {setButtonNumber(vehicle.name)}
                                         </div>
                             })}
-                        {/* STATIC CODE --
-                            <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" /> 
-                        */}
-                            {/* STATIC CODE -- 
-                                <div className="technology-flex-allText-nd-buttons--buttons-container--button launchV-active">1</div>
-                                <div className="technology-flex-allText-nd-buttons--buttons-container--button">2</div>
-                                <div className="technology-flex-allText-nd-buttons--buttons-container--button">3</div> 
-                            */}
                         </div>
                 
                         <div className="technology-flex-allText-nd-buttons--allText-container">
                             <div className="technology-flex-allText-nd-buttons--allText-container--headingText">The terminology...</div>
                             <div className="technology-flex-allText-nd-buttons--allText-container--titleText">{technology}
-                                {/* STATIC CODE -- Launch vehicle */}
                             </div>
                     
                             <div className="technology-flex-allText-nd-buttons--allText-container--description">{hereIsYourVehicle.description}
-                                {/* STATIC CODE -- 
-                                    A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! 
-                                */}
                             </div>
                         </div>
                     </div>

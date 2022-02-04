@@ -37,7 +37,7 @@ const App = () => {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/destinations" element={<Destination destinationData={data.destinations} />} />
-                <Route exact path="/crew" element={<Crew crewData={data.crew} />} />
+                <Route exact path="/crew" element={<Crew crewData={data.crew} />} /> blergh
                 <Route exact path="/technologies" element={<Technology techData={data.technology} isTablet={isTablet} isMobile={isMobile} />} />
             </Routes>
       </div>

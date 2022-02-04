@@ -86,11 +86,6 @@ const Crew = ({crewData}) => {
 
                                 <div className="text crew-content--flex--textContainer--content-flex-container--content-allText--bio">
                                     {welcomeAboard.bio}
-                                    {/* STATIC CODE --
-                                        Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
-                                        and former NASA astronaut. He launched into space for the third time as
-                                        commander of Crew Dragon Demo-2.
-                                    */}
                                 </div>
                             </div>
                         </div>
@@ -115,9 +110,6 @@ const Crew = ({crewData}) => {
                                         return <div className={isActive(crewMember.role)} key={crewMember.name} onClick={(event) => {handleChange(event, crewMember.role)}} />
                                         })
                                     }
-                        {/* STATIC CODE --
-                            <div className="carousel-dot" /><div className="carousel-dot" /><div className="carousel-dot" />
-                        */}
                     </div>
                 </div>
             </div>

@@ -85,23 +85,12 @@ const Destination = ({destinationData}) => {
                                         return <div className={isActive(destination.name)} key={destination.name} onClick={(event) => {handleChange(event, destination.name)}}>{destination.name}</div>
                                         })
                                 }
-                                {/* STATIC CODE -- 
-                                    <div className="tabtext" id="Moon" onClick={(event) => {handleChange(event, "Moon")}}>Moon</div>
-                                    <div className="tabtext" id="Mars" onClick={(event) => {handleChange(event, "Mars")}}>Mars</div>
-                                    <div className="tabtext" id="Europa" onClick={(event) => {handleChange(event, "Europa")}}>Europa</div>
-                                    <div className="tabtext" id="Titan" onClick={(event) => {handleChange(event, "Titan")}}>Titan</div> 
-                                */}
                             </div>
 
                             <div className="destination-flex-allText--title">{ weRgoingThere.name }</div>
 
                             <div className="text text destination-flex-allText--text">
                                 { weRgoingThere.description }
-                                {/* STATIC CODE -- 
-                                    See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-                                    regain perspective and come back refreshed. While you’re there, take in some history 
-                                    by visiting the Luna 2 and Apollo 11 landing sites. 
-                                */}
                             </div>
 
                             <div className="text destination-flex-allText--line" />
@@ -109,17 +98,12 @@ const Destination = ({destinationData}) => {
                                 <div className="column">
                                     <div className="subheading2">Avg. distance</div>
                                     <div className="subheading1"> { weRgoingThere.distance }
-                                        {/* STATIC CODE -- 
-                                            384,400 km 
-                                        */}
                                         </div>
                                 </div>
                                 <div className="column">
                                     <div className="subheading2">Est. travel time</div>
                                     <div className="subheading1">{ weRgoingThere.travel }
-                                        {/* STATIC CODE -- 
-                                            3 days 
-                                        */}</div>
+                                        </div>
                                 </div>
                             </div>
                         </div>

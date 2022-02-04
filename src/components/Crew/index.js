@@ -6,8 +6,6 @@ import PropTypes from "prop-types";
 import "./style.scss";
 // import image from "../../assets/crew/image-douglas-hurley.png"; // <-- STATIC IMPORT
 
-//TODO:Set Order for crew members using CSS
-
 const Crew = ({crewData}) => {
 
     // == HOOKS TO MANAGE STATE ON LINKS & ADD ACTIVE CLASS TO CSS

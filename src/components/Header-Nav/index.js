@@ -49,7 +49,7 @@ const HeaderNav = ({isMobile}) => {
 }
 
 //  HeaderNav.propTypes = {
-    //   isMobile: PropTypes.element,
+//      isMobile: PropTypes.element,
 // };
 
 export default HeaderNav;

@@ -69,4 +69,9 @@ const Navbar = ({open, isOpen}) => {
     )
 }
 
+//  Navbar.propTypes = {
+//    open: PropTypes.element,
+//    isOpen: PropTypes.element,
+// };
+
 export default Navbar;

@@ -14,10 +14,10 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
     - [Built with](#built-with)
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
+  - [Future Updates](#future-updates)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -66,10 +66,20 @@ I know now I need to code my applications with a mobile-first workflow, will be 
 - [Flexbox Cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties) - Because why shouldn't I use this ? :D
 - [Josh Comeau's blog - Embracing modern image formats](https://www.joshwcomeau.com/performance/embracing-modern-image-formats/) - For some knowledge about webp & PNG images
 
+
+## Future Updates
+I would like to add some animations to make the website more smooth :
+- [] For transitions between pages
+- [] On the slide's images
+- [] On navigation bar when clicking on a link
+- [] On burger menu when clicking on the open/close icon
+
+
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@CrazyWolv](https://www.frontendmentor.io/profile/CrazyWolv)
+
 
 ## Acknowledgments
 
